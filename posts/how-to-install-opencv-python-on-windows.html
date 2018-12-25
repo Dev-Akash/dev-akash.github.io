@@ -1,6 +1,7 @@
 <HTML>
 <Head>
 <link rel="icon" type="image/png" href="../logos/icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <meta name="description" content="how to install OpenCV on windows by Akash Srivastava">
 <meta name="keywords" content="OpenCV,How To,Installation,Tutorial,Anaconda,Python,Dev akash, akash srivastava">
@@ -12,9 +13,9 @@ text-align: center;
 margin-top:-8px;
 margin-left:-8px;
 margin-right:-8px;
-padding: 10px;
+padding: 2px;
 background: #3498db;
-color: black;
+color: white;
 text-transform: uppercase;
 letter-spacing: 10px;
 font-family:"Courier new";
@@ -22,13 +23,12 @@ opacity: 0.9;
 }
 body{
 background:white;
+height: 95%;
 }
 .home{
 float: left;
-width: 100px;
-height: 40px;
-margin-left: -10px;
-margin-top: -10px;
+width:auto;
+height: 16%;
 }
 .contact{
 margin-left: -8px;
@@ -44,24 +44,34 @@ p{
 text-indent: 50px;
 }
 .content{
-font-size: 22px;
-margin-left: 20%;
-margin-right: 20%;
-margin-top: 8%;
-text-align: justify;
+font-size: 18px;
+margin-left: 6%;
+margin-right: 6%;
 font-family: courier;
+}
+.codeBlock{
+background: black;
+padding:3px;
+color: white;
+width: 100%;
+border: 2px solid black;
+border-radius: 4px;
+padding: 5px;
+}
+h2{
+text-align:center;
 }
 </style>
 </Head>
 <Body>
 <div class="header">
-<div class="home">
-<a href="../index.html"><img src="../logos/icon.png" width="135" alt="logo"></a>
-</div>
-<h1>How to install opencv on windows</h1>
+<a href="../index.html"><img src="../logos/icon.png" width="135" alt="logo" width="10%" class="home"></a>
+<h1>Posts<h1>
 </div>
 
+
 <div class="content">
+<h2>How to install opencv on windows</h2>
 <p>Welcome! In this post I am going to describ how to install OpenCV, an open-source library for
 computer vision in python on Windows. OpenCV is a great library to handle most of the Computer Vision projects.<br> <h3>Let's get started to install it in python on windows</h3>
 <b><u>Step 1: Install Anaconda</u></b><br><br>
@@ -71,23 +81,24 @@ computer vision in python on Windows. OpenCV is a great library to handle most o
 </ul>
 <b><u>Step 2: Install OpenCV </u></b><br><br>
 To install OpenCV open Anaconda terminal and execute following instructions:<br><br>
-<code>
+
+<div class="codeBlock">
 conda install -c conda-forge opencv 
-</code>
+</div>
 <br><br>
 press 'y' and hit enter, downloading will get started.
 <br><br>
 <b><u>Step 3: Check the installation</u></b><br><br>
 
 After installing the library, check whether it is successfully installed or not, open Anaconda terminal and execute following command to open python<br><br>
-<code>
+<div class="codeBlock">
 python
-</code><br><br>
+</div><br><br>
 Now, check the installation by getting version of OpenCV<br><br>
-<code>>>import cv2<br>>>cv2.__version__</code>
+<div class="codeBlock">>>import cv2<br>>>cv2.__version__</div>
 <br><br>
 You will get output something like this<br><br>
-<img src="../images/opencv-installed.PNG" alt="installed-image">
+<img src="../images/opencv-installed.PNG" alt="installed-image" width=90%>
 </p>
 </div>
 
