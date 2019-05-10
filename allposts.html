@@ -22,7 +22,6 @@ color: white;
 text-transform: uppercase;
 letter-spacing: 10px;
 font-family:"Courier new";
-opacity: 0.9;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 font-family: 'Permanent Marker', cursive;
 }
@@ -33,6 +32,7 @@ font-size: 21px;
 body{
 background:white;
 margin-bottom: -8px;
+background-image: url(images/background.jpg)
 }
 .home{
 float: left;
@@ -64,7 +64,13 @@ margin-bottom: 20px;
 font-family: "Courier new";
 color: black;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+transition: padding 0.5s;
+transition-timing-function: ease-out;
 }
+.post:hover{
+padding: 20px;
+}
+
 h2{
 color: #3498db;
 font-family: 'Comfortaa', sans-serif;
