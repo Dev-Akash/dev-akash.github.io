@@ -1,5 +1,6 @@
 <HTML>
 <Head>
+<link href="https://fonts.googleapis.com/css?family=Comfortaa|Permanent+Marker|Poiret+One|Zilla+Slab" rel="stylesheet">
 <link rel="icon" type="image/png" href="../logos/akash-logo.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
@@ -18,14 +19,14 @@ background: #3498db;
 color: white;
 text-transform: uppercase;
 letter-spacing: 10px;
-font-family:"Courier new";
-opacity: 0.9;
+font-family: 'Permanent Marker', cursive;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 body{
-background:white;
-height: 95%;
+  background-image: url(../images/background.jpg);
+  height: 100%; 
 }
+
 .home{
 float: left;
 width:auto;
@@ -46,11 +47,18 @@ p{
 text-indent: 50px;
 }
 .content{
-font-size: 18px;
+font-size: 21px;
 margin-left: auto;
 margin-right: auto;
+margin-top: 80px;
+margin-bottom: 80px;
+border: 2px solid white;
+border-radius: 10px;
+box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2), 0 -6px 20px 0 rgba(0, 0, 0, 0.19);
 width: 80%;
-font-family: courier;
+padding: 21px;
+background: white;
+font-family: 'Zilla Slab', cursive;
 }
 .codeBlock{
 background: black;
@@ -60,12 +68,20 @@ width: 100%;
 border: 2px solid black;
 border-radius: 4px;
 padding: 5px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 h2{
 text-align:center;
+font-family: 'Comfortaa', sans-serif;
+color:#3498db;
+}
+h3{
+font-family: 'Comfortaa', sans-serif;
+color:#3498db;
 }
 .image{
 width:90%;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 </style>
 </Head>
@@ -75,13 +91,12 @@ width:90%;
 <h1>Posts<h1>
 </div>
 
-
 <div class="content">
 <h2>How to convert color image to grayscale in OpenCV</h2>
 <p>
 Welcome, In this tutorial we are going to see how to read a image as grayscale as well as we will convert a color image into a grayscale image using opencv and python, if you do not know how to read a image in opencv, do check out this post <a href="https://dev-akash.github.io/posts/how-to-read-image-in-opencv.html">here</a>. 
 
-<h3><u>Let's get started</u></h3>
+<h3>Let's get started</h3>
 
 So to convert a color image to a grayscale image in opencv, we can have two solution
 <ul>
@@ -89,7 +104,7 @@ So to convert a color image to a grayscale image in opencv, we can have two solu
 <li>Convert image to grayscale using <strong>cvtColor()</strong> function</li>
 </ul>
 Let's discover how to do it with above mentioned functions...
-<h3><u>Method 1: Using imread() function</u></h3>
+<h3>Method 1: Using imread() function</h3>
 <strong>imread()</strong> function is used to read an image in OpenCV but there is one more parameter to be considerd, that is <strong>flag</strong> which decides the way image is read. There three flag defined in OpenCV..
 <ol>
 <li>cv2.IMREAD_COLOR or 1</li>
@@ -114,7 +129,7 @@ cv2.waitKey(0)<br><br>
 cv2.destroyAllWindows()<br><br>
 </div>
 
-<h3><u>Method 2: Using cvtColor() function</u></h3>
+<h3>Method 2: Using cvtColor() function</h3>
 <strong>cvtColor()</strong> function in OpenCV is very helpful in converting color channels from one to another such as BRG to HSV or BRG to RGB. The same method can be used to convert BRG to GRAY by using the <strong>cv2.cvtColor(img,cv2.BGR2GRAY)</strong><br><br>
 
 <div class="codeBlock">
@@ -136,16 +151,16 @@ cv2.waitKey(0)<br><br>
 cv2.destroyAllWindows()<br><br>
 </div>
 
-<h3><u>Example</u></h3>
+<h3>Example</h3>
 <img class="image" src="../images/grayscale-conversion.PNG" alt="Output-image"><br><br><br>
 
-<h3><u>Conclusion</u></h3>
+<h3>Conclusion</h3>
 In this post we came to know two ways in which we can convert a color image to a grayscale image and came across the function like <strong>cvtColor()</strong> and <strong>imread() flags</strong> used in opencv to perform that conversion. If you want to read more articles related to OpenCV <a href="https://dev-akash.github.io/allposts.html">click here</a>
 </p>
 </div>
 
 <div class="contact">
-<center><h2>Contact</h2><center>
+<center><h2 style="color: white;">Contact</h2><center>
 <a href="tel:+918574900238"><img src="../logos/phone.png" alt="Phone"></a>
 <a href="https://www.linkedin.com/in/akashsrivastava995"><img src="../logos/linkedin.png" alt="linkedin" height=48px></a>
 <a href="mailto:akashsrivastava995@gmail.com"><img src="../logos/gmail.png" alt="gmail"></a>

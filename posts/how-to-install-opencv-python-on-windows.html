@@ -1,5 +1,6 @@
 <HTML>
 <Head>
+<link href="https://fonts.googleapis.com/css?family=Comfortaa|Permanent+Marker|Poiret+One|Zilla+Slab" rel="stylesheet">
 <link rel="icon" type="image/png" href="../logos/akash-logo.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
@@ -18,13 +19,12 @@ background: #3498db;
 color: white;
 text-transform: uppercase;
 letter-spacing: 10px;
-font-family:"Courier new";
-opacity: 0.9;
+font-family: 'Permanent Marker', cursive;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 body{
-background:white;
-height: 95%;
+  background-image: url(../images/background.jpg);
+  height: 100%;
 }
 .home{
 float: left;
@@ -46,10 +46,18 @@ p{
 text-indent: 50px;
 }
 .content{
-font-size: 18px;
-margin-left: 6%;
-margin-right: 6%;
-font-family: courier;
+font-size: 21px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 80px;
+margin-bottom: 80px;
+border: 2px solid white;
+border-radius: 10px;
+box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2), 0 -6px 20px 0 rgba(0, 0, 0, 0.19);
+width: 80%;
+padding: 21px;
+background: white;
+font-family: 'Zilla Slab', cursive;
 }
 .codeBlock{
 background: black;
@@ -59,9 +67,20 @@ width: 100%;
 border: 2px solid black;
 border-radius: 4px;
 padding: 5px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 h2{
 text-align:center;
+font-family: 'Comfortaa', sans-serif;
+color:#3498db;
+}
+h3{
+font-family: 'Comfortaa', sans-serif;
+color:#3498db;
+}
+.image{
+width:90%;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 </style>
 </Head>
@@ -76,12 +95,12 @@ text-align:center;
 <h2>How to install opencv on windows</h2>
 <p>Welcome! In this post I am going to describ how to install OpenCV, an open-source library for
 computer vision in python on Windows. OpenCV is a great library to handle most of the Computer Vision projects.<br> <h3>Let's get started to install it in python on windows</h3>
-<b><u>Step 1: Install Anaconda</u></b><br><br>
+<b>Step 1: Install Anaconda</b><br><br>
 <ul>
 <li>Download Anconda from <a href="https://www.anaconda.com/download/">here</a></li>
 <li>Run .exe file and install it successfully</li>
 </ul>
-<b><u>Step 2: Install OpenCV </u></b><br><br>
+<b>Step 2: Install OpenCV </b><br><br>
 To install OpenCV open Anaconda terminal and execute following instructions:<br><br>
 
 <div class="codeBlock">
@@ -90,7 +109,7 @@ conda install -c conda-forge opencv
 <br><br>
 press 'y' and hit enter, downloading will get started.
 <br><br>
-<b><u>Step 3: Check the installation</u></b><br><br>
+<b>Step 3: Check the installation</b><br><br>
 
 After installing the library, check whether it is successfully installed or not, open Anaconda terminal and execute following command to open python<br><br>
 <div class="codeBlock">
@@ -100,7 +119,7 @@ Now, check the installation by getting version of OpenCV<br><br>
 <div class="codeBlock">>>import cv2<br>>>cv2.__version__</div>
 <br><br>
 You will get output something like this<br><br>
-<img src="../images/opencv-installed.PNG" alt="installed-image" width=90%>
+<img src="../images/opencv-installed.PNG" alt="installed-image" class="image">
 </p>
 </div>
 
