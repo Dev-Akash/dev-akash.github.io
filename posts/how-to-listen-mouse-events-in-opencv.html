@@ -1,0 +1,177 @@
+<HTML>
+<Head>
+<link href="https://fonts.googleapis.com/css?family=Comfortaa|Permanent+Marker|Poiret+One|Zilla+Slab" rel="stylesheet">
+<link rel="icon" type="image/png" href="../logos/akash-logo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="description" content="how to listen mouse events in openCV by Akash Srivastava. This post will be haveing a illustration of an app on how the mouse events work in opencv and will provide a light on callback function and the cv2.setMouseCallback() function">
+<meta name="keywords" content="OpenCV,How To,Installation,Tutorial,Anaconda,Python,Dev akash, akash srivastava,read, read image,cv2,cv2.imread(),cv2.waitKey(),cv2.destroyAllWindows(), mouse event listen, how to draw a line, application using opencv, mouse events in opencv, mouse listener in opencv, handeling mouse events in opencv, opencv mouse pointer, mouse coordinates in opencv">
+<meta name="author" content="Akash Srivastava">
+<Title> How to listen mouse events in OpenCV </Title>
+<style>
+.header{
+text-align: center;
+margin-top:-8px;
+margin-left:-8px;
+margin-right:-8px;
+padding: 2px;
+background: #3498db;
+color: white;
+text-transform: uppercase;
+letter-spacing: 10px;
+font-family: 'Permanent Marker', cursive;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+body{
+  background-image: url(../images/background.jpg);
+  height: 100%; 
+}
+.home{
+float: left;
+width:auto;
+height: 16%;
+}
+.contact{
+margin-left: -8px;
+margin-right: -8px;
+margin-top: 40px;
+padding:30px;
+text-transform: uppercase;
+letter-spacing: 10px;
+font-family: "Courier new";
+background: #3498db;
+box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2), 0 -6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+p{
+text-indent: 50px;
+}
+.content{
+font-size: 21px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 80px;
+margin-bottom: 80px;
+border: 2px solid white;
+border-radius: 10px;
+box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.2), 0 -6px 20px 0 rgba(0, 0, 0, 0.19);
+width: 80%;
+padding: 21px;
+background: white;
+font-family: 'Zilla Slab', cursive;
+}
+.codeBlock{
+background: black;
+padding:3px;
+color: white;
+width: 100%;
+border: 2px solid black;
+border-radius: 4px;
+padding: 5px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+h2{
+text-align:center;
+font-family: 'Comfortaa', sans-serif;
+color:#3498db;
+}
+h3{
+font-family: 'Comfortaa', sans-serif;
+color:#3498db;
+}
+</style>
+</Head>
+<Body>
+<div class="header">
+<a href="../index.html"><img src="../logos/akash-logo.png" width="135" alt="logo" width="10%" class="home"></a>
+<h1>Posts<h1>
+</div>
+
+
+<div class="content">
+<h2>How to Listen Mouse Events in OpenCV</h2>
+<p>Welcome! In this post I am going to illustrate how to listen mouse events in OpenCV, in last post I have described <a href="how-to-convert-color-image-to-grayscale-in-opencv-with-python.html">how to convert color image to grayscale image in OpenCV using Python</a>, do read it if your are new to openCV and also if you like reading the post do checkout our all posts about opencv <a href="https://dev-akash.github.io/allposts.html">here</a><br> 
+<h3>Let's get started</h3>
+<p>
+	So in this tutorial we will create a small application which will draw the path followed by the mouse pointer on the canvas. In order to do this we will divide the creation into two simple steps:<br>
+	<ul>
+		<li>Writing the Callback Function</li>
+		<li>Adding the Callback function to cv2.setMouseCallback() function</li>
+	</ul>
+
+	Basically a Callback Function is a kind of normal function definition but is used to define the instructions to be executed during the happening of the event (i.e., the click or drag of the mouse), we will discuss in detail in the upcoming section and in the second section we will see how to add that Callback Function to the main program so that the active frame execute the Callback Function when event happens.
+	<br>
+	So with this let's step up towards our first step to create the application, that is building the Callback Function.
+</p>
+<h3>Step 1: Mouse CallBack Function</h3>
+<p>
+	A callback function is the function which will get executed whenever the event happens, so basically the callback function have a same syntax definition wherever it is used but can differ in what it does as it totally depends on what instruction are written in it.
+
+	<div class="codeBlock">
+		def draw(event,x,y,flags,param):<br><br>
+		&emsp;if event == cv2.EVENT_MOUSEMOVE:<br><br>
+		&emsp;&emsp;cv2.circle(img,(x,y),10,(255,0,0),-1)<br>
+	</div>
+	<br>
+	<br>
+	So in the above code snippet we are declaring a Callback function having five parameters. The first parameter <strong>event</strong> holds the value of the type of event such as left button click, right button click, etc. The second and thrid parameter <strong>x, y</strong> are the coordinates of the pointer. 
+	<br>
+	This is all which we need to create our logic and draw a dot on the canvas wherever our pointer is. So in the first line of the code we declare the function <strong>draw_circle()</strong> having the five paramters which are needed. In the second line of code we check for the type of event which is required to be handled, in our case we are handeling the left button click of the mouse to draw the circle and if the condition satisfies we will draw the circle using the <strong>cv2.circle()</strong> function. The circle woulde be drawn on <strong>img</strong> at <strong>x and y</strong> coordinates of 10 radius with blue color (BGR) and would be filled circle as we passed the thickness parameter to be -1.
+</p>
+<h3>Step 2: Adding CallBack to cv2.setMouseCallback() function</h3>
+	<p>Now as our callback function is ready to perform some action on listening the event we need to add it to the eventHandler in opencv using the <strong>cv2.setMouseCallback()</strong> function which will trigger the callback function for the particular window on which it is listening the event.
+	<br><br>
+	So firstly we have to create our canvas on which we would be drawing with mouse and then we would provide it a window with a name and finally add the callback function to that window. and in order to show the image and keep taking the input we will run the <strong>cv2.imshow()</strong> function in a continuous while loop.
+
+	<div class="codeBlock">
+		img = np.zeros((512,512,3), np.uint8)<br><br>
+		cv2.namedWindow('image')<br><br>
+		cv2.setMouseCallback('image', draw)<br><br>
+		<br>
+		while(True):<br><br>
+		&emsp;cv2.imshow('image', img)<br><br>
+		&emsp;if cv2.waitKey(20) & 0xff == 27:<br><br>
+		&emsp;&emsp;break<br><br>
+		cv2.destroyAllWindows()
+	</div>
+	<br>
+	In the above code we firstly creating the <strong>img</strong> image which is a black canvas and then in second line we created a named window and on that named window in third line we added the callback function. Then in infinite while loop we are showing the image and the to break the while loop we added a condition to listen the keyboard presses and if the <strong>Escape</strong> button is pressed exit the loop and then execute the <strong>cv2.destroyAllWindows()</strong> function which will destroy all windows created by OpenCV.
+	</p>
+
+<h3>Combining the Whole Code</h3>
+<p>
+	<div class="codeBlock">
+		def draw(event,x,y,flags,param):<br><br>
+		&emsp;if event == cv2.EVENT_MOUSEMOVE:<br><br>
+		&emsp;&emsp;cv2.circle(img,(x,y),10,(255,0,0),-1)<br><br><br>
+
+		img = np.zeros((512,512,3), np.uint8)<br><br>
+		cv2.namedWindow('image')<br><br>
+		cv2.setMouseCallback('image', draw)<br><br>
+		<br>
+		while(True):<br><br>
+		&emsp;cv2.imshow('image', img)<br><br>
+		&emsp;if cv2.waitKey(20) & 0xff == 27:<br><br>
+		&emsp;&emsp;break<br><br>
+		cv2.destroyAllWindows()
+	</div>
+</p>
+
+<h3>Output</h3>
+<p>
+	<video width="512" autoplay controls>
+		<source src="../images/mouse_event.mp4" type="video/mp4">
+		Your browser do not support video tag
+	</video>
+</p>
+</div>
+
+<div class="contact">
+<center><h2>Contact</h2><center>
+<a href="tel:+918574900238"><img src="../logos/phone.png" alt="Phone"></a>
+<a href="https://www.linkedin.com/in/akashsrivastava995"><img src="../logos/linkedin.png" alt="linkedin" height=48px></a>
+<a href="mailto:akashsrivastava995@gmail.com"><img src="../logos/gmail.png" alt="gmail"></a>
+<a href="https://github.com/Dev-Akash/"><img src="../logos/github.png" alt="github" width=120px height=48px></a>
+</div>
+
+</Body>
+</HTML>
