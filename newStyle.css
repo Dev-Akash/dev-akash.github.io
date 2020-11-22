@@ -187,6 +187,15 @@
 .social{
 	padding-bottom: 50px;
 }
+.footer{
+	background-color: black;
+	padding: 10px;
+}
+.footer a{
+	text-decoration: none;
+	color: white;
+	margin-right: 30px;
+}
 
 @media only screen and (max-width: 768px){
 	.header h1{
