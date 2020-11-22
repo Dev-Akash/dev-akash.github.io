@@ -1,125 +1,138 @@
 <HTML>
+
 <Head>
-<link href="https://fonts.googleapis.com/css?family=Comfortaa|Permanent+Marker|Poiret+One|Zilla+Slab" rel="stylesheet">
-<link rel="icon" type="image/png" href="../logos/akash-logo.png">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="UTF-8">
-<meta name="description" content="How to bulk rename files by Akash Srivastava">
-<meta name="keywords" content="OpenCV,How To,Installation,Tutorial,Anaconda,Python,Dev akash, akash srivastava,Bulk rename files, rename files, automatic rename, script to rename,
+     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Permanent+Marker|Poiret+One|Zilla+Slab"
+          rel="stylesheet">
+     <link rel="icon" type="image/png" href="../logos/akash-logo.png">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta charset="UTF-8">
+     <meta name="description" content="How to bulk rename files by Akash Srivastava">
+     <meta name="keywords" content="OpenCV,How To,Installation,Tutorial,Anaconda,Python,Dev akash, akash srivastava,Bulk rename files, rename files, automatic rename, script to rename,
 rename files, rename all, rename folder, rename all files in folder, How to Rename in bulk, how to rename files in bulk, how to rename lots of file, renaming
 renamer, Bulkren, rename using Bulkren, how to use Bulkren, how to bulkren, bulkren usage, using bulkren">
-<meta name="author" content="Akash Srivastava">
-<Title> How to Bulk rename files - Akash Srivastava </Title>
-<link rel="stylesheet" type="text/css" href="style.css">
-<script data-ad-client="ca-pub-8197254535741426" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+     <meta name="author" content="Akash Srivastava">
+     <Title> How to Bulk rename files - Akash Srivastava </Title>
+     <link rel="stylesheet" type="text/css" href="style.css">
+     <script data-ad-client="ca-pub-8197254535741426" async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </Head>
+
 <Body>
-<div class="header">
-<a href="../index.html"><img src="../logos/akash-logo.png" width="135" alt="logo" width="10%" class="home"></a>
-<h1>Posts<h1>
-</div>
-
-<div class="ads">
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- first_add -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8197254535741426"
-     data-ad-slot="6773757685"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</div>
-
-<div class="content">
-<h2>How to Bulk Rename Files</h2>
-
-<p>
-     So, most of the time we encounter a situation for renaming the files in large quantity, persons who
-     create datasets to the persons who just want to organise a folder with some conventional names. To make
-     this hectic task more convinent. I have created my own PYPI package as a command line interface tool (CLI tool)
-     <a href="#https://pypi.org/project/Bulkren/">Bulkren</a> which i think can help you out in reducing the work required from going file to file and renaming them by hand 
-     to just writting a single command on command prompt (cmd).
-
-     <h3>So let's get started</h3>
-
-     So, to use this package, we first need to install in on our machine and to install it on your machine 
-     you firstly need python installed on your machine and then you must have pip installed on it. If you already satisfy this requirement
-     then you are ready to go ahead and follow up the tutorial but if not i would recommend to checkout the resources on <b>How to install Python</b>
-     and the <b>How to install pip in Python</b> and don't forget to add python to PATH in Environments on your machine.
-     <br><br>
-     Now to get started with renaming bunch of files in a single go, first we run the following command to download the 
-     <a href="#https://pypi.org/project/Bulkren/">Bulkren</a> package.<br><br>
-     <div class="codeBlock">
-          pip install Bulkren
+     <div class="header">
+          <a href="../index.html"><img src="../logos/akash-logo.png" width="135" alt="logo" width="10%"
+                    class="home"></a>
+          <h1>Posts<h1>
      </div>
-     <br><br>
-     And now to rename files, ensure that all files are inside a folder, we will call it a <b>Input Folder</b> and right the following
-     command.<br><br>
-     <div class="codeBlock">
-          python -m Bulkren -i "input_folder_path" -o "output_folder_path" -p "patter_to_rename"
-     </div>
-     <br><br>
-     Now here, <br>
-     <ul>
-          <li>-i or --input takes <b>input folder path</b></li>
-          <li>-o or --output takes <b>output folder path</b></li>
-          <li>-p or --pattern takes <b>pattern for renaming files</b>.</li>
-     </ul>
-    
-     Let's try to understand it with a example, <br><br>
 
-     <div class="codeBlock">
-          python -m Bulkren -i C:\User\Akash\Desktop\input_folder -o C:\User\Akash\Desktop\output_folder -p images_XYZ
-     </div>
-     <br><br>
      <div class="ads">
           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-     <!-- first_add -->
-     <ins class="adsbygoogle"
-          style="display:block"
-          data-ad-client="ca-pub-8197254535741426"
-          data-ad-slot="6773757685"
-          data-ad-format="auto"
-          data-full-width-responsive="true"></ins>
-     <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
-     </script>
+          <!-- first_add -->
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8197254535741426"
+               data-ad-slot="6773757685" data-ad-format="auto" data-full-width-responsive="true"></ins>
+          <script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
      </div>
-     This above example will take all the files in <b>C:\User\Akash\Desktop\input_folder</b> and then rename it with pattern <b>images_XYZ</b> where XYZ would be replaced number count of file (remember to add XYZ in end only) 
-     and will save it to the <b>C:\User\Akash\Desktop\output_folder</b> folder.<br><br> 
-     <b><u>Note</u></b> : If the -o argument is not passed then it will automatically create a output named folder in same parent directory, for above example the output folder path would be C:\User\Akash\Desktop\output
 
-     <br><br>
-     So, i hope now you might have got how to use Bulkren and how you can use it to save your time in doing such a hectic task.
-     <br><br>
-     Thank you!
-</p>
+     <div class="content">
+          <h2>How to Bulk Rename Files</h2>
 
-<div class="ads">
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- first_add -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8197254535741426"
-     data-ad-slot="6773757685"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</div>
+          <p>
+               So, most of the time we encounter a situation for renaming the files in large quantity, persons who
+               create datasets to the persons who just want to organise a folder with some conventional names. To make
+               this hectic task more convinent. I have created my own PYPI package as a command line interface tool (CLI
+               tool)
+               <a href="#https://pypi.org/project/Bulkren/">Bulkren</a> which i think can help you out in reducing the
+               work required from going file to file and renaming them by hand
+               to just writting a single command on command prompt (cmd).
 
-</div>
+          <h3>So let's get started</h3>
 
-<div class="contact">
-<center><h2>Contact</h2><center>
-<a href="https://www.linkedin.com/in/akashsrivastava995"><img src="../logos/linkedin.png" alt="linkedin" height=48px></a>
-<a href="mailto:akashsrivastava995@gmail.com"><img src="../logos/gmail.png" alt="gmail"></a>
-<a href="https://github.com/Dev-Akash/"><img src="../logos/github.png" alt="github" width=120px height=48px></a>
-</div>
+          So, to use this package, we first need to install in on our machine and to install it on your machine
+          you firstly need python installed on your machine and then you must have pip installed on it. If you already
+          satisfy this requirement
+          then you are ready to go ahead and follow up the tutorial but if not i would recommend to checkout the
+          resources on <b>How to install Python</b>
+          and the <b>How to install pip in Python</b> and don't forget to add python to PATH in Environments on your
+          machine.
+          <br><br>
+          Now to get started with renaming bunch of files in a single go, first we run the following command to download
+          the
+          <a href="#https://pypi.org/project/Bulkren/">Bulkren</a> package.<br><br>
+          <div class="codeBlock">
+               pip install Bulkren
+          </div>
+          <br><br>
+          And now to rename files, ensure that all files are inside a folder, we will call it a <b>Input Folder</b> and
+          right the following
+          command.<br><br>
+          <div class="codeBlock">
+               python -m Bulkren -i "input_folder_path" -o "output_folder_path" -p "patter_to_rename"
+          </div>
+          <br><br>
+          Now here, <br>
+          <ul>
+               <li>-i or --input takes <b>input folder path</b></li>
+               <li>-o or --output takes <b>output folder path</b></li>
+               <li>-p or --pattern takes <b>pattern for renaming files</b>.</li>
+          </ul>
 
+          Let's try to understand it with a example, <br><br>
+
+          <div class="codeBlock">
+               python -m Bulkren -i C:\User\Akash\Desktop\input_folder -o C:\User\Akash\Desktop\output_folder -p
+               images_XYZ
+          </div>
+          <br><br>
+          <div class="ads">
+               <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+               <!-- first_add -->
+               <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8197254535741426"
+                    data-ad-slot="6773757685" data-ad-format="auto" data-full-width-responsive="true"></ins>
+               <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+               </script>
+          </div>
+          This above example will take all the files in <b>C:\User\Akash\Desktop\input_folder</b> and then rename it
+          with pattern <b>images_XYZ</b> where XYZ would be replaced number count of file (remember to add XYZ in end
+          only)
+          and will save it to the <b>C:\User\Akash\Desktop\output_folder</b> folder.<br><br>
+          <b><u>Note</u></b> : If the -o argument is not passed then it will automatically create a output named folder
+          in same parent directory, for above example the output folder path would be C:\User\Akash\Desktop\output
+
+          <br><br>
+          So, i hope now you might have got how to use Bulkren and how you can use it to save your time in doing such a
+          hectic task.
+          <br><br>
+          Thank you!
+          </p>
+
+          <div class="ads">
+               <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+               <!-- first_add -->
+               <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8197254535741426"
+                    data-ad-slot="6773757685" data-ad-format="auto" data-full-width-responsive="true"></ins>
+               <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+               </script>
+          </div>
+
+     </div>
+
+     <div class="contact">
+          <center>
+               <h2>Contact</h2>
+               <center>
+                    <a href="https://www.linkedin.com/in/akashsrivastava995"><img src="../logos/linkedin.png"
+                              alt="linkedin" height=48px></a>
+                    <a href="mailto:akashsrivastava995@gmail.com"><img src="../logos/gmail.png" alt="gmail"></a>
+                    <a href="https://github.com/Dev-Akash/"><img src="../logos/github.png" alt="github" width=120px
+                              height=48px></a>
+     </div>
+     <div class="footer">
+          <a href="./privacy_policy.html" target="_blank">Privacy Policy</a>
+          <a href="./terms-and-conditions.html" target="_blank">Terms and Conditions</a>
+     </div>
 </Body>
+
 </HTML>

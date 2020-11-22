@@ -1,124 +1,143 @@
 <HTML>
+
 <Head>
-<link href="https://fonts.googleapis.com/css?family=Comfortaa|Permanent+Marker|Poiret+One|Zilla+Slab" rel="stylesheet">
-<link rel="icon" type="image/png" href="../logos/akash-logo.png">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="UTF-8">
-<meta name="description" content="how to convert color image to grayscale in opencv with python by Akash Srivastava">
-<meta name="keywords" content="OpenCV,How To,Tutorial,Anaconda,Python,Dev akash, akash srivastava,read, read image,cv2, convert color,color image to grayscale, opencv">
-<meta name="author" content="Akash Srivastava">
-<Title> How to convert Color image to Grayscale in OpenCV with Python - Akash Srivastava </Title>
-<link rel="stylesheet" type="text/css" href="style.css">
-<script data-ad-client="ca-pub-8197254535741426" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+     <link href="https://fonts.googleapis.com/css?family=Comfortaa|Permanent+Marker|Poiret+One|Zilla+Slab"
+          rel="stylesheet">
+     <link rel="icon" type="image/png" href="../logos/akash-logo.png">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta charset="UTF-8">
+     <meta name="description"
+          content="how to convert color image to grayscale in opencv with python by Akash Srivastava">
+     <meta name="keywords"
+          content="OpenCV,How To,Tutorial,Anaconda,Python,Dev akash, akash srivastava,read, read image,cv2, convert color,color image to grayscale, opencv">
+     <meta name="author" content="Akash Srivastava">
+     <Title> How to convert Color image to Grayscale in OpenCV with Python - Akash Srivastava </Title>
+     <link rel="stylesheet" type="text/css" href="style.css">
+     <script data-ad-client="ca-pub-8197254535741426" async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </Head>
+
 <Body>
-<div class="header">
-<a href="https://dev-akash.github.io/index.html"><img src="../logos/akash-logo.png" width="135" alt="logo" width="10%" class="home"></a>
-<h1>Posts<h1>
-</div>
+     <div class="header">
+          <a href="https://dev-akash.github.io/index.html"><img src="../logos/akash-logo.png" width="135" alt="logo"
+                    width="10%" class="home"></a>
+          <h1>Posts<h1>
+     </div>
 
-<div class="content">
-<h2>How to convert color image to grayscale in OpenCV</h2>
-<p>
-Welcome, In this tutorial we are going to see how to read a image as grayscale as well as we will convert a color image into a grayscale image using opencv and python, if you do not know how to read a image in opencv, do check out this post <a href="https://dev-akash.github.io/posts/how-to-read-image-in-opencv.html">here</a>. 
+     <div class="content">
+          <h2>How to convert color image to grayscale in OpenCV</h2>
+          <p>
+               Welcome, In this tutorial we are going to see how to read a image as grayscale as well as we will convert
+               a color image into a grayscale image using opencv and python, if you do not know how to read a image in
+               opencv, do check out this post <a
+                    href="https://dev-akash.github.io/posts/how-to-read-image-in-opencv.html">here</a>.
 
-<h3>Let's get started</h3>
+          <h3>Let's get started</h3>
 
-So to convert a color image to a grayscale image in opencv, we can have two solution
-<ul>
-<li>Convert image to grayscale with <strong>imread()</strong> function</li>
-<li>Convert image to grayscale using <strong>cvtColor()</strong> function</li>
-</ul>
-Let's discover how to do it with above mentioned functions...
-<h3>Method 1: Using imread() function</h3>
-<strong>imread()</strong> function is used to read an image in OpenCV but there is one more parameter to be considerd, that is <strong>flag</strong> which decides the way image is read. There three flag defined in OpenCV..
-<ol>
-<li>cv2.IMREAD_COLOR or 1</li>
-<li>cv2.IMREAD_GRAYSCALE or 0</li>
-<li>cv2.IMREAD_UNCHANGED or -1</li>
-</ol>
-So to convert the color image to grayscale we will be using <strong>cv2.imread("image-name.png",0)</strong> or you can also write <strong>cv2.IMREAD_GRAYSCALE</strong> in the place of 0 as it also denotes the same constant.<br><br>
+          So to convert a color image to a grayscale image in opencv, we can have two solution
+          <ul>
+               <li>Convert image to grayscale with <strong>imread()</strong> function</li>
+               <li>Convert image to grayscale using <strong>cvtColor()</strong> function</li>
+          </ul>
+          Let's discover how to do it with above mentioned functions...
+          <h3>Method 1: Using imread() function</h3>
+          <strong>imread()</strong> function is used to read an image in OpenCV but there is one more parameter to be
+          considerd, that is <strong>flag</strong> which decides the way image is read. There three flag defined in
+          OpenCV..
+          <ol>
+               <li>cv2.IMREAD_COLOR or 1</li>
+               <li>cv2.IMREAD_GRAYSCALE or 0</li>
+               <li>cv2.IMREAD_UNCHANGED or -1</li>
+          </ol>
+          So to convert the color image to grayscale we will be using <strong>cv2.imread("image-name.png",0)</strong> or
+          you can also write <strong>cv2.IMREAD_GRAYSCALE</strong> in the place of 0 as it also denotes the same
+          constant.<br><br>
 
-<div class="codeBlock">
-import cv2<br><br>
+          <div class="codeBlock">
+               import cv2<br><br>
 
-<span style="color: red"># Reading color image as grayscale</span><br>
-gray = cv2.imread("color-img.png",0)<br><br>
+               <span style="color: red"># Reading color image as grayscale</span><br>
+               gray = cv2.imread("color-img.png",0)<br><br>
 
-<span style="color: red"># Showing grayscale image</span><br>
-cv2.imshow("Grayscale Image", gray)<br><br>
+               <span style="color: red"># Showing grayscale image</span><br>
+               cv2.imshow("Grayscale Image", gray)<br><br>
 
-<span style="color: red"># waiting for key event</span><br>
-cv2.waitKey(0)<br><br>
+               <span style="color: red"># waiting for key event</span><br>
+               cv2.waitKey(0)<br><br>
 
-<span style="color: red"># destroying all windows</span><br>
-cv2.destroyAllWindows()<br><br>
-</div>
+               <span style="color: red"># destroying all windows</span><br>
+               cv2.destroyAllWindows()<br><br>
+          </div>
 
-<div class="ads">
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- first_add -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8197254535741426"
-     data-ad-slot="6773757685"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</div>
+          <div class="ads">
+               <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+               <!-- first_add -->
+               <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8197254535741426"
+                    data-ad-slot="6773757685" data-ad-format="auto" data-full-width-responsive="true"></ins>
+               <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+               </script>
+          </div>
 
-<h3>Method 2: Using cvtColor() function</h3>
-<strong>cvtColor()</strong> function in OpenCV is very helpful in converting color channels from one to another such as BRG to HSV or BRG to RGB. The same method can be used to convert BRG to GRAY by using the <strong>cv2.cvtColor(img,cv2.BGR2GRAY)</strong><br><br>
+          <h3>Method 2: Using cvtColor() function</h3>
+          <strong>cvtColor()</strong> function in OpenCV is very helpful in converting color channels from one to
+          another such as BRG to HSV or BRG to RGB. The same method can be used to convert BRG to GRAY by using the
+          <strong>cv2.cvtColor(img,cv2.BGR2GRAY)</strong><br><br>
 
-<div class="codeBlock">
-import cv2<br><br>
+          <div class="codeBlock">
+               import cv2<br><br>
 
-<span style="color: red"># Reading color image</span><br>
-img = cv2.imread("color-img.png")<br><br>
+               <span style="color: red"># Reading color image</span><br>
+               img = cv2.imread("color-img.png")<br><br>
 
-<span style="color: red"># Converting color image to grayscale image</span><br>
-gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)<br><br>
+               <span style="color: red"># Converting color image to grayscale image</span><br>
+               gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)<br><br>
 
-<span style="color: red"># Showing the converted image</span><br>
-cv2.imshow("Converted Image",gray)<br><br>
+               <span style="color: red"># Showing the converted image</span><br>
+               cv2.imshow("Converted Image",gray)<br><br>
 
-<span style="color: red"># waiting for key event</span><br>
-cv2.waitKey(0)<br><br>
+               <span style="color: red"># waiting for key event</span><br>
+               cv2.waitKey(0)<br><br>
 
-<span style="color: red"># destroying all windows</span><br>
-cv2.destroyAllWindows()<br><br>
-</div>
+               <span style="color: red"># destroying all windows</span><br>
+               cv2.destroyAllWindows()<br><br>
+          </div>
 
-<h3>Example</h3>
-<img class="image" src="../images/grayscale-conversion.PNG" alt="Output-image"><br><br><br>
+          <h3>Example</h3>
+          <img class="image" src="../images/grayscale-conversion.PNG" alt="Output-image"><br><br><br>
 
-<h3>Conclusion</h3>
-In this post we came to know two ways in which we can convert a color image to a grayscale image and came across the function like <strong>cvtColor()</strong> and <strong>imread() flags</strong> used in opencv to perform that conversion. If you want to read more articles related to OpenCV <a href="https://dev-akash.github.io/allposts.html">click here</a>
-</p>
-</div>
+          <h3>Conclusion</h3>
+          In this post we came to know two ways in which we can convert a color image to a grayscale image and came
+          across the function like <strong>cvtColor()</strong> and <strong>imread() flags</strong> used in opencv to
+          perform that conversion. If you want to read more articles related to OpenCV <a
+               href="https://dev-akash.github.io/allposts.html">click here</a>
+          </p>
+     </div>
 
-<div class="ads">
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- first_add -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-8197254535741426"
-     data-ad-slot="6773757685"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</div>
+     <div class="ads">
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <!-- first_add -->
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8197254535741426"
+               data-ad-slot="6773757685" data-ad-format="auto" data-full-width-responsive="true"></ins>
+          <script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+     </div>
 
-<div class="contact">
-<center><h2 style="color: white;">Contact</h2><center>
-<a href="https://www.linkedin.com/in/akashsrivastava995"><img src="../logos/linkedin.png" alt="linkedin" height=48px></a>
-<a href="mailto:akashsrivastava995@gmail.com"><img src="../logos/gmail.png" alt="gmail"></a>
-<a href="https://github.com/Dev-Akash/"><img src="../logos/github.png" alt="github" width=120px height=48px></a>
-</div>
-
+     <div class="contact">
+          <center>
+               <h2 style="color: white;">Contact</h2>
+               <center>
+                    <a href="https://www.linkedin.com/in/akashsrivastava995"><img src="../logos/linkedin.png"
+                              alt="linkedin" height=48px></a>
+                    <a href="mailto:akashsrivastava995@gmail.com"><img src="../logos/gmail.png" alt="gmail"></a>
+                    <a href="https://github.com/Dev-Akash/"><img src="../logos/github.png" alt="github" width=120px
+                              height=48px></a>
+     </div>
+     <div class="footer">
+          <a href="./privacy_policy.html" target="_blank">Privacy Policy</a>
+          <a href="./terms-and-conditions.html" target="_blank">Terms and Conditions</a>
+     </div>
 </Body>
+
 </HTML>
