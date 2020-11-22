@@ -80,3 +80,12 @@ color:#3498db;
 	margin-left: auto;
 	margin-right: auto;
 }
+.footer{
+	background-color: black;
+	padding: 10px;
+}
+.footer a{
+	text-decoration: none;
+	color: white;
+	margin-right: 30px;
+}
