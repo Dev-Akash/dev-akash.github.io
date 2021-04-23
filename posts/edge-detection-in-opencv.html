@@ -7,44 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="UTF-8">
     <meta name="description"
-        content="how to listen mouse events in openCV by Akash Srivastava. This post will be haveing a illustration of an app on how the mouse events work in opencv and will provide a light on callback function and the cv2.setMouseCallback() function">
-    <meta name="keywords" content="OpenCV,
-How To,
-Installation,
-Tutorial,Anaconda,
-Python,
-Dev akash,
-akash srivastava,
-read, 
-read image,
-cv2,
-cv2.imread(),
-cv2.waitKey(),
-cv2.destroyAllWindows(), 
-mouse event listen, 
-how to draw a line, 
-application using opencv,
-mouse events in opencv, 
-mouse listener in opencv, 
-handeling mouse events in opencv, 
-opencv mouse pointer, 
-mouse coordinates in opencv,
-opencv mouse events python,
-opencv mouse events c++,
-opencv mouse listener,
-opencv highgui mouse events,
-opencv mouse click events,
-python opencv mouse events,
-opencv mouse click event c++,
-opencv mouse drag event,
-opencv mouse event handler,
-mouse events in opencv,
-mouse events in opencv python,
-mouse click events in opencv,
-opencv mouse move event,
-opencv mouse move,
-opencv mouse event scroll,
-opencv mouse wheel event">
+        content="In this blog, we are going to understand that, what is edge detection and why it is used in image processing, and then we would talk about the most widely used technique of edge detection i.e., Canny Edge detection, and finally we will code Canny Edge detection using OpenCV's <b>Canny()</b> function.">
+    <meta name="keywords" content="OpenCV, Canny, Canny edge detection, digital image processing, image,
+    how to, edge detection, akash srivastava, dev-akash, gradient, computer vision">
     <meta name="author" content="Akash Srivastava">
 
     <!-- Bootstrap CSS -->
@@ -62,7 +27,7 @@ opencv mouse wheel event">
     </script>
     <script data-ad-client="ca-pub-8197254535741426" async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <title>Getting Started with Videos in OpenCV - Akash Srivastava</title>
+    <title>Edge Detection in OpenCV - Akash Srivastava</title>
 </head>
 
 <body>
@@ -97,17 +62,16 @@ opencv mouse wheel event">
             <div id="list-example" class="list-group sticky-top">
                 <h4 class="my-3">In this article</h4>
                 <a class="list-group-item list-group-item-action" href="#list-item-1">Introduction</a>
-                <a class="list-group-item list-group-item-action" href="#list-item-2">Capturing Video using Web
-                    Camera</a>
-                <a class="list-group-item list-group-item-action" href="#list-item-3">Reading Video from a file</a>
-                <a class="list-group-item list-group-item-action" href="#list-item-4">Bonus</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-2">What is edge detection ?</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-3">Canny Edge Detection</a>
+                <a class="list-group-item list-group-item-action" href="#list-item-4">Code</a>
             </div>
         </div>
         <div class="col-sm-6 p-2 bg-white">
             <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
                 <div class="jumbotron jumbotron-fluid">
                     <div class="container">
-                        <h1 class="display-4">Getting Started with Videos in OpenCV</h1>
+                        <h1 class="display-4">Edge Detection in OpenCV</h1>
                     </div>
                 </div>
 
@@ -125,135 +89,105 @@ opencv mouse wheel event">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
                             <li class="breadcrumb-item"><a href="../allposts.html">Blogs</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Getting Started with Videos in
-                                OpenCV</li>
+                            <li class="breadcrumb-item active" aria-current="page">Edge Detection in OpenCV</li>
                         </ol>
                     </nav>
                     <div class="flex-column">
                         <span class="badge badge-pill badge-primary p-2 mb-3">OpenCV</span>
-                        <span class="badge badge-pill badge-primary p-2 mb-3">Video</span>
+                        <span class="badge badge-pill badge-primary p-2 mb-3">Edge-Detection</span>
                         <span class="badge badge-pill badge-primary p-2 mb-3">Python</span>
                     </div>
                     <h2 id="list-item-1">Introduction</h4>
-                        <p>
-                            Hi there, and welcome again to Dev-akash's blog post, so today we will be getting
-                            started with videos in
-                            OpenCV, and will be learning about the following things: <br>
+                    <p>
+                        In this blog, we are going to understand that, what is edge detection and why it is used in image processing, and then we would talk about the most widely used technique of edge detection i.e., Canny Edge detection, and finally we will code Canny Edge detection using OpenCV's <b>Canny()</b> function.
+                    </p>
+
+                    <!-- Ads Here -->
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- first_add -->
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8197254535741426"
+                        data-ad-slot="6773757685" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+
+                    <h2 id="list-item-2">What is edge detection ?</h4>
+                    <p>
+                        Edge detection is basically a mathematical operation which is done on image to get the edges of the objects present in the image by checking for the sharp change in the light(intensity of pixels), moving from one pixel to another. 
+                    </p>
+
+                    <!-- Ads Here -->
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- first_add -->
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8197254535741426"
+                        data-ad-slot="6773757685" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+
+                    <h2 id="list-item-3">Canny Edge Detection</h4>
+                    <p>
+                        Edge detection is a fundamental operation in image processing and the most the most widely used algorithm to perform the edge detection is <b>Canny Edge Detection</b>.
+                        <br>
+                        Canny Edge Detection is a multi-stage algorithm, which perform several operations on the image to make the edge detection much better, it performs the following consecutive operations:<br>
                         <ul>
-                            <li>Capturing Video using Web Camera</li>
-                            <li>Reading Video from a file</li>
+                            <li>Noise Reduction</li>
+                            <li>Finding Intensity Gradient of the Image</li>
+                            <li>Non-maximum Suppression</li>
+                            <li>Hysteresis Thresholding</li>
                         </ul>
-                        After going through the blog you will be able to read a video from a file and capture the
-                        live feed from your
-                        own camera and yes with this you can also read multiple cameras at same time (Bonus!).<br>
-                        So let's get Started!!<br>
+                        For more information about these individual step, you can this <a href="https://docs.opencv.org/master/da/d22/tutorial_py_canny.html">article</a>
+                        <p>
+                        OpenCV provides a simple method <b>Canny()</b> to perform these above steps in a single go. <b>Canny()</b> method needs three arguments to be passed, first is the <b>source image</b>, second is the <b>minVal</b> which is the minmum thresholding value for edge-detection, and third is the <b>maxVal</b> which is the maximum thresholding value for edge-detection.
                         </p>
 
-                        <!-- Ads Here -->
-                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        <!-- first_add -->
-                        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8197254535741426"
-                            data-ad-slot="6773757685" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                        <script>
-                            (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
+                        Let's see how to write the code for doing edge detection using Canny() method of OpenCV.
 
-                        <h2 id="list-item-2">Capturing Video using Web Camera</h4>
-                            <p>
-                                Capturing a video from a web camera is a very basic requirement for most of the tasks in
-                                Computer Vision
-                                field such as Realtime Attendance marking system, Pose estimation and Recognition,
-                                Pedestrain Detection,
-                                etc which requires the live feed from the cameras and now you would be able to do that
-                                too. So first have
-                                a look at the code and then we will dive into it to understand it more clearly.</p>
-                            <script
-                                src="https://gist.github.com/Dev-Akash/ac68e7f2260fb2e6e8d8a750c256c961.js"></script>
-                            So, lets dive into the code <br><br>
-                            In line 2 and 3 we are importing the importing libraries, namely OpenCV and Numpy as we will
-                            use them.
-                            <br><br>
-                            In line 6 we are calling a function of opencv as cv2.VideoCapute() which is actually
-                            accessing the camera attached to your computer and passing the data captured from it to the
-                            variable
-                            cam, the argument passed in the paranthesis as 0 states that we are using
-                            the default camera or the first camera if multiple cameras are connected and if you want to
-                            switch to another
-                            camera then default, just change the argument 0 to 1, 2, 3... etc as per number of cameras
-                            connected.
-                            <br><br>
-                            From line 10-19 we are running a loop to read the frames coming from camera and showing it
-                            to a window created
-                            by OpenCV. So in the loop in line 12 we take ret, frame after reading the input from the cam
-                            as cam.read(), where ret is the status of the captured frame and frame is
-                            the image.
-                            <br><br>
-                            In line 15, we are showing our captured image in frame variable in a window named
-                            "Webcam" using the opencv function cv2.imshow()
-                            <br><br>
-                            In line 18-19, we are creating a condition that when a user presses the q button on keybord
-                            the loop breaks and executes the upcoming lines
-                            <br><br>
+                    </p>
 
-                            In line 22 and 24, we just close the opened camera and also close all the windows created by
-                            opencv during the
-                            execution of program.
-                            </p>
+                    <h2 id="list-item-4">Code</h4>
+                        <div class="card text-white bg-dark mb-3">
+                            <div class="card-header h5">Code</div>
+                            <div class="card-body">
+                                <!--h5 class="card-title">Dark card title</h5-->
+                                import cv2<br><br>
 
-                            <!-- Ads Here -->
-                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                            <!-- first_add -->
-                            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8197254535741426"
-                                data-ad-slot="6773757685" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                            <script>
-                                (adsbygoogle = window.adsbygoogle || []).push({});
-                            </script>
+                                <span style="color: green"># Reading image</span><br>
+                                img = cv2.imread("color-img.png")<br><br>
 
-                            <h2 id="list-item-3">Reading Video from a file</h4>
-                                <p>
-                                    Reading a video from a file is not a much different task as what we have to do is to
-                                    change the source of feed
-                                    provided, that is, in the previous section our source of input was camera and hence
-                                    we were giving argument as
-                                    a number <strong>0</strong> to access the default camera and now to access a file on
-                                    the system as feed we
-                                    will provide the path of the file as argument to the function.<br>
-                                    Here is the code, check it out. And just to remind after this we have a
-                                    <strong>bonus</strong>.<br><br>
+                                <span style="color: green"># Edge-detection using Canny() method</span><br>
+                                canny = cv2.Canny(img, 100, 200)<br><br>
 
-                                    <script
-                                        src="https://gist.github.com/Dev-Akash/ae852fe6705d07ca6cb4ce385a73e82b.js"></script>
-                                </p>
+                                <span style="color: green"># Showing the edge-detected image</span><br>
+                                cv2.imshow("Canny Image",canny)<br><br>
 
-                                <h2 id="list-item-4">Bonus</h4>
-                                    <p>
-                                        So as stated above i am going to show you how you can read mutiple cameras
-                                        simulatneously and I know after
-                                        reading this much of blog you would be having a idea how to do it. But to make
-                                        you comfortable with it I
-                                        am just going to provide the code here and I promise there is nothing new to
-                                        explain here, infact you
-                                        will explain what is happening to yourself (Its a great excercise !!).<br><br>
-                                        And Thanks for your love and support by reading this blog !!<br>
-                                        <script
-                                            src="https://gist.github.com/Dev-Akash/a85b7b885605f764d66a4bb40fdbffca.js"></script>
-                                    </p>
-                                    <div class="dropdown-divider my-4"></div>
-                                    <div class="col-sm-6">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                Contributed By
-                                            </div>
-                                            <div class="card-body">
-                                                <h5 class="card-title">Dev-Akash</h5>
-                                                <p class="card-text">A Computer Vision Enthusiast</p>
-                                                <a href="https://github.com/dev-akash" class="btn btn-primary">View
-                                                    Profile</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <a class="btn btn-outline-primary rounded mt-5 col-sm-2 mx-auto" href="#">Back To
-                                        Top</a>
+                                <span style="color: green"># waiting for key event</span><br>
+                                cv2.waitKey(0)<br><br>
+
+                                <span style="color: green"># destroying all windows</span><br>
+                                cv2.destroyAllWindows()<br><br>
+                            </div>
+                        </div>
+                        <h4>Output</h4><br>
+                        <img class="image" src="../images/canny_edge_detection_output_img.png" alt="Output-image"><br>
+                    <p>
+                        
+                    </p>
+                    <div class="dropdown-divider my-4"></div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-header">
+                                Contributed By
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Dev-Akash</h5>
+                                <p class="card-text">A Computer Vision Enthusiast</p>
+                                <a href="https://github.com/dev-akash" class="btn btn-primary">View
+                                    Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="btn btn-outline-primary rounded mt-5 col-sm-2 mx-auto" href="#">Back To Top</a>
                 </div>
             </div>
         </div>
@@ -298,7 +232,7 @@ opencv mouse wheel event">
             <div class="col-sm-4 text-center flex-column">
                 <div class="h4">About</div>
                 <div>
-                    <a href="mail:sriakash.dev@gmail.com">Contact</a>
+                    <a href="mailto:sriakash.dev@gmail.com">Contact</a>
                 </div>
                 <div>
                     <a href="../privacy_policy.html">Privacy</a>
