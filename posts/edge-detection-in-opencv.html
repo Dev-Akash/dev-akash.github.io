@@ -98,96 +98,111 @@
                         <span class="badge badge-pill badge-primary p-2 mb-3">Python</span>
                     </div>
                     <h2 id="list-item-1">Introduction</h4>
-                    <p>
-                        In this blog, we are going to understand that, what is edge detection and why it is used in image processing, and then we would talk about the most widely used technique of edge detection i.e., Canny Edge detection, and finally we will code Canny Edge detection using OpenCV's <b>Canny()</b> function.
-                    </p>
-
-                    <!-- Ads Here -->
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <!-- first_add -->
-                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8197254535741426"
-                        data-ad-slot="6773757685" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-
-                    <h2 id="list-item-2">What is edge detection ?</h4>
-                    <p>
-                        Edge detection is basically a mathematical operation which is done on image to get the edges of the objects present in the image by checking for the sharp change in the light(intensity of pixels), moving from one pixel to another. 
-                    </p>
-
-                    <!-- Ads Here -->
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <!-- first_add -->
-                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8197254535741426"
-                        data-ad-slot="6773757685" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-
-                    <h2 id="list-item-3">Canny Edge Detection</h4>
-                    <p>
-                        Edge detection is a fundamental operation in image processing and the most the most widely used algorithm to perform the edge detection is <b>Canny Edge Detection</b>.
-                        <br>
-                        Canny Edge Detection is a multi-stage algorithm, which perform several operations on the image to make the edge detection much better, it performs the following consecutive operations:<br>
-                        <ul>
-                            <li>Noise Reduction</li>
-                            <li>Finding Intensity Gradient of the Image</li>
-                            <li>Non-maximum Suppression</li>
-                            <li>Hysteresis Thresholding</li>
-                        </ul>
-                        For more information about these individual step, you can this <a href="https://docs.opencv.org/master/da/d22/tutorial_py_canny.html">article</a>
                         <p>
-                        OpenCV provides a simple method <b>Canny()</b> to perform these above steps in a single go. <b>Canny()</b> method needs three arguments to be passed, first is the <b>source image</b>, second is the <b>minVal</b> which is the minmum thresholding value for edge-detection, and third is the <b>maxVal</b> which is the maximum thresholding value for edge-detection.
+                            In this blog, we are going to understand that, what is edge detection and why it is used in
+                            image processing, and then we would talk about the most widely used technique of edge
+                            detection i.e., Canny Edge detection, and finally we will code Canny Edge detection using
+                            OpenCV's <b>Canny()</b> function.
                         </p>
 
-                        Let's see how to write the code for doing edge detection using Canny() method of OpenCV.
+                        <!-- Ads Here -->
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- first_add -->
+                        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8197254535741426"
+                            data-ad-slot="6773757685" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
 
-                    </p>
+                        <h2 id="list-item-2">What is edge detection ?</h4>
+                            <p>
+                                Edge detection is basically a mathematical operation which is done on image to get the
+                                edges of the objects present in the image by checking for the sharp change in the
+                                light(intensity of pixels), moving from one pixel to another.
+                            </p>
 
-                    <h2 id="list-item-4">Code</h4>
-                        <div class="card text-white bg-dark mb-3">
-                            <div class="card-header h5">Code</div>
-                            <div class="card-body">
-                                <!--h5 class="card-title">Dark card title</h5-->
-                                import cv2<br><br>
+                            <!-- Ads Here -->
+                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <!-- first_add -->
+                            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8197254535741426"
+                                data-ad-slot="6773757685" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
 
-                                <span style="color: green"># Reading image</span><br>
-                                img = cv2.imread("color-img.png")<br><br>
+                            <h2 id="list-item-3">Canny Edge Detection</h4>
+                                <p>
+                                    Edge detection is a fundamental operation in image processing and the most the most
+                                    widely used algorithm to perform the edge detection is <b>Canny Edge Detection</b>.
+                                    <br>
+                                    Canny Edge Detection is a multi-stage algorithm, which perform several operations on
+                                    the image to make the edge detection much better, it performs the following
+                                    consecutive operations:<br>
+                                <ul>
+                                    <li>Noise Reduction</li>
+                                    <li>Finding Intensity Gradient of the Image</li>
+                                    <li>Non-maximum Suppression</li>
+                                    <li>Hysteresis Thresholding</li>
+                                </ul>
+                                For more information about these individual step, you can this <a
+                                    href="https://docs.opencv.org/master/da/d22/tutorial_py_canny.html">article</a>
+                                <p>
+                                    OpenCV provides a simple method <b>Canny()</b> to perform these above steps in a
+                                    single go. <b>Canny()</b> method needs three arguments to be passed, first is the
+                                    <b>source image</b>, second is the <b>minVal</b> which is the minmum thresholding
+                                    value for edge-detection, and third is the <b>maxVal</b> which is the maximum
+                                    thresholding value for edge-detection.
+                                </p>
 
-                                <span style="color: green"># Edge-detection using Canny() method</span><br>
-                                canny = cv2.Canny(img, 100, 200)<br><br>
+                                Let's see how to write the code for doing edge detection using Canny() method of OpenCV.
 
-                                <span style="color: green"># Showing the edge-detected image</span><br>
-                                cv2.imshow("Canny Image",canny)<br><br>
+                                </p>
 
-                                <span style="color: green"># waiting for key event</span><br>
-                                cv2.waitKey(0)<br><br>
+                                <h2 id="list-item-4">Code</h4>
+                                    <div class="card text-white bg-dark mb-3">
+                                        <div class="card-header h5">Code</div>
+                                        <div class="card-body">
+                                            <!--h5 class="card-title">Dark card title</h5-->
+                                            import cv2<br><br>
 
-                                <span style="color: green"># destroying all windows</span><br>
-                                cv2.destroyAllWindows()<br><br>
-                            </div>
-                        </div>
-                        <h4>Output</h4><br>
-                        <img class="image" src="../images/canny_edge_detection_output_img.png" alt="Output-image"><br>
-                    <p>
-                        
-                    </p>
-                    <div class="dropdown-divider my-4"></div>
-                    <div class="col-sm-6">
-                        <div class="card">
-                            <div class="card-header">
-                                Contributed By
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Dev-Akash</h5>
-                                <p class="card-text">A Computer Vision Enthusiast</p>
-                                <a href="https://github.com/dev-akash" class="btn btn-primary">View
-                                    Profile</a>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="btn btn-outline-primary rounded mt-5 col-sm-2 mx-auto" href="#">Back To Top</a>
+                                            <span style="color: green"># Reading image</span><br>
+                                            img = cv2.imread("color-img.png")<br><br>
+
+                                            <span style="color: green"># Edge-detection using Canny() method</span><br>
+                                            canny = cv2.Canny(img, 100, 200)<br><br>
+
+                                            <span style="color: green"># Showing the edge-detected image</span><br>
+                                            cv2.imshow("Canny Image",canny)<br><br>
+
+                                            <span style="color: green"># waiting for key event</span><br>
+                                            cv2.waitKey(0)<br><br>
+
+                                            <span style="color: green"># destroying all windows</span><br>
+                                            cv2.destroyAllWindows()<br><br>
+                                        </div>
+                                    </div>
+                                    <h4>Output</h4><br>
+                                    <img class="image" src="../images/canny_edge_detection_output_img.png"
+                                        alt="Output-image"><br>
+                                    <p>
+
+                                    </p>
+                                    <div class="dropdown-divider my-4"></div>
+                                    <div class="col-sm-6">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                Contributed By
+                                            </div>
+                                            <div class="card-body">
+                                                <h5 class="card-title">Dev-Akash</h5>
+                                                <p class="card-text">A Computer Vision Enthusiast</p>
+                                                <a href="https://github.com/dev-akash" class="btn btn-primary">View
+                                                    Profile</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="btn btn-outline-primary rounded mt-5 col-sm-2 mx-auto" href="#">Back To
+                                        Top</a>
                 </div>
             </div>
         </div>
