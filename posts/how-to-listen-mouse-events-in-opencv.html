@@ -62,6 +62,8 @@ opencv mouse wheel event">
 	</script>
 	<script data-ad-client="ca-pub-8197254535741426" async
 		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8197254535741426"
+		crossorigin="anonymous"></script>
 	<title>How to Listen Mouse Events in OpenCV - Akash Srivastava</title>
 </head>
 
@@ -140,22 +142,33 @@ opencv mouse wheel event">
 					</div>
 					<h2 id="list-item-1">Introduction</h4>
 						<p>
-							Welcome! In this post I am going to illustrate how to listen mouse events in OpenCV, in last post I have described <a href="how-to-convert-color-image-to-grayscale-in-opencv-with-python.html">how to convert color image to grayscale image in OpenCV using Python</a>, do read it if your are new to openCV and also if you like reading the post do checkout our all posts about opencv <a href="https://dev-akash.github.io/allposts.html">here</a>
+							Welcome! In this post I am going to illustrate how to listen mouse events in OpenCV, in last
+							post I have described <a
+								href="how-to-convert-color-image-to-grayscale-in-opencv-with-python.html">how to convert
+								color image to grayscale image in OpenCV using Python</a>, do read it if your are new to
+							openCV and also if you like reading the post do checkout our all posts about opencv <a
+								href="https://dev-akash.github.io/allposts.html">here</a>
 							<br>
-							So in this tutorial we will create a small application which will draw the path followed by the mouse
-							pointer on the canvas. In order to do this we will divide the creation into two simple steps:<br>
-							<ul>
-								<li>Writing the Callback Function</li>
-								<li>Adding the Callback function to cv2.setMouseCallback() function</li>
-							</ul>
+							So in this tutorial we will create a small application which will draw the path followed by
+							the mouse
+							pointer on the canvas. In order to do this we will divide the creation into two simple
+							steps:<br>
+						<ul>
+							<li>Writing the Callback Function</li>
+							<li>Adding the Callback function to cv2.setMouseCallback() function</li>
+						</ul>
 
-							Basically a Callback Function is a kind of normal function definition but is used to define the instructions to
-							be executed during the happening of the event (i.e., the click or drag of the mouse), we will discuss in detail
-							in the upcoming section and in the second section we will see how to add that Callback Function to the main
-							program so that the active frame execute the Callback Function when event happens.
-							<br>
-							So with this let's step up towards our first step to create the application, that is building the Callback
-							Function.
+						Basically a Callback Function is a kind of normal function definition but is used to define the
+						instructions to
+						be executed during the happening of the event (i.e., the click or drag of the mouse), we will
+						discuss in detail
+						in the upcoming section and in the second section we will see how to add that Callback Function
+						to the main
+						program so that the active frame execute the Callback Function when event happens.
+						<br>
+						So with this let's step up towards our first step to create the application, that is building
+						the Callback
+						Function.
 						</p>
 
 						<!-- Ads Here -->
@@ -173,30 +186,37 @@ opencv mouse wheel event">
 
 						<h2 id="list-item-2">Mouse Callback Function</h4>
 							<p>
-								A callback function is the function which will get executed whenever the event happens, so basically the
-								callback function have a same syntax definition wherever it is used but can differ in what it does as it
+								A callback function is the function which will get executed whenever the event happens,
+								so basically the
+								callback function have a same syntax definition wherever it is used but can differ in
+								what it does as it
 								totally depends on what instruction are written in it.
-								<div class="card text-white bg-dark mb-3">
-									<div class="card-header h5">Code</div>
-									<div class="card-body">
-										 <!--h5 class="card-title">Dark card title</h5-->
-										 def draw(event,x,y,flags,param):<br>
-											&emsp;if event == cv2.EVENT_MOUSEMOVE:<br>
-											&emsp;&emsp;cv2.circle(img,(x,y),10,(255,0,0),-1)<br>
-									</div>
-							   </div>
-								<br>
-								So in the above code snippet we are declaring a Callback function having five parameters. The first parameter
-								event holds the value of the type of event such as left button click, right button click, etc.
-								The second and thrid parameter x, y are the coordinates of the pointer.
-								<br><br>
-								This is all which we need to create our logic and draw a dot on the canvas wherever our pointer is. So in the
-								first line of the code we declare the function draw_circle() having the five paramters which
-								are needed. In the second line of code we check for the type of event which is required to be handled, in our
-								case we are handeling the left button click of the mouse to draw the circle and if the condition satisfies we
-								will draw the circle using the cv2.circle() function. The circle woulde be drawn on
-								img at x and y coordinates of 10 radius with blue color (BGR) and would be
-								filled circle as we passed the thickness parameter to be -1.
+							<div class="card text-white bg-dark mb-3">
+								<div class="card-header h5">Code</div>
+								<div class="card-body">
+									<!--h5 class="card-title">Dark card title</h5-->
+									def draw(event,x,y,flags,param):<br>
+									&emsp;if event == cv2.EVENT_MOUSEMOVE:<br>
+									&emsp;&emsp;cv2.circle(img,(x,y),10,(255,0,0),-1)<br>
+								</div>
+							</div>
+							<br>
+							So in the above code snippet we are declaring a Callback function having five parameters.
+							The first parameter
+							event holds the value of the type of event such as left button click, right button click,
+							etc.
+							The second and thrid parameter x, y are the coordinates of the pointer.
+							<br><br>
+							This is all which we need to create our logic and draw a dot on the canvas wherever our
+							pointer is. So in the
+							first line of the code we declare the function draw_circle() having the five paramters which
+							are needed. In the second line of code we check for the type of event which is required to
+							be handled, in our
+							case we are handeling the left button click of the mouse to draw the circle and if the
+							condition satisfies we
+							will draw the circle using the cv2.circle() function. The circle woulde be drawn on
+							img at x and y coordinates of 10 radius with blue color (BGR) and would be
+							filled circle as we passed the thickness parameter to be -1.
 							</p>
 
 							<!-- Ads Here -->
@@ -212,38 +232,46 @@ opencv mouse wheel event">
 								 (adsbygoogle = window.adsbygoogle || []).push({});
 							</script> -->
 
-							<h2 id="list-item-3">Adding CallBack to	cv2.setMouseCallback() function</h4>
+							<h2 id="list-item-3">Adding CallBack to cv2.setMouseCallback() function</h4>
 								<p>
-									Now as our callback function is ready to perform some action on listening the event we need to add it to the
-									eventHandler in opencv using the cv2.setMouseCallback() function which will trigger the
+									Now as our callback function is ready to perform some action on listening the event
+									we need to add it to the
+									eventHandler in opencv using the cv2.setMouseCallback() function which will trigger
+									the
 									callback function for the particular window on which it is listening the event.
 									<br><br>
-									So firstly we have to create our canvas on which we would be drawing with mouse and then we would provide it
-									a window with a name and finally add the callback function to that window. and in order to show the image
-									and keep taking the input we will run the cv2.imshow() function in a continuous while loop.
+									So firstly we have to create our canvas on which we would be drawing with mouse and
+									then we would provide it
+									a window with a name and finally add the callback function to that window. and in
+									order to show the image
+									and keep taking the input we will run the cv2.imshow() function in a continuous
+									while loop.
 
-									<div class="card text-white bg-dark mb-3">
-										<div class="card-header h5">Code</div>
-										<div class="card-body">
-											 <!--h5 class="card-title">Dark card title</h5-->
-											 img = np.zeros((512,512,3), np.uint8)<br>
-											 cv2.namedWindow('image')<br>
-											 cv2.setMouseCallback('image', draw)<br>
-											 <br>
-											 while(True):<br>
-											 &emsp;cv2.imshow('image', img)<br>
-											 &emsp;if cv2.waitKey(20) & 0xff == 27:<br>
-											 &emsp;&emsp;break<br><br>
-											 cv2.destroyAllWindows()
-										</div>
-								   </div>
+								<div class="card text-white bg-dark mb-3">
+									<div class="card-header h5">Code</div>
+									<div class="card-body">
+										<!--h5 class="card-title">Dark card title</h5-->
+										img = np.zeros((512,512,3), np.uint8)<br>
+										cv2.namedWindow('image')<br>
+										cv2.setMouseCallback('image', draw)<br>
+										<br>
+										while(True):<br>
+										&emsp;cv2.imshow('image', img)<br>
+										&emsp;if cv2.waitKey(20) & 0xff == 27:<br>
+										&emsp;&emsp;break<br><br>
+										cv2.destroyAllWindows()
+									</div>
+								</div>
 
-									<br>
-									In the above code we firstly creating the img image which is a black canvas and then in second
-									line we created a named window and on that named window in third line we added the callback function. Then in
-									infinite while loop we are showing the image and the to break the while loop we added a condition to listen the
-									keyboard presses and if the Escape button is pressed exit the loop and then execute the
-									cv2.destroyAllWindows() function which will destroy all windows created by OpenCV.
+								<br>
+								In the above code we firstly creating the img image which is a black canvas and then in
+								second
+								line we created a named window and on that named window in third line we added the
+								callback function. Then in
+								infinite while loop we are showing the image and the to break the while loop we added a
+								condition to listen the
+								keyboard presses and if the Escape button is pressed exit the loop and then execute the
+								cv2.destroyAllWindows() function which will destroy all windows created by OpenCV.
 								</p>
 
 								<!-- Ads Here -->
@@ -261,33 +289,33 @@ opencv mouse wheel event">
 
 								<h2 id="list-item-4">Combining the Whole Code</h4>
 									<p>
-										<div class="card text-white bg-dark mb-3">
-											<div class="card-header h5">Code</div>
-											<div class="card-body">
-												<!--h5 class="card-title">Dark card title</h5-->
-												def draw(event,x,y,flags,param):<br>
-												&emsp;if event == cv2.EVENT_MOUSEMOVE:<br>
-												&emsp;&emsp;cv2.circle(img,(x,y),10,(255,0,0),-1)<br><br>
+									<div class="card text-white bg-dark mb-3">
+										<div class="card-header h5">Code</div>
+										<div class="card-body">
+											<!--h5 class="card-title">Dark card title</h5-->
+											def draw(event,x,y,flags,param):<br>
+											&emsp;if event == cv2.EVENT_MOUSEMOVE:<br>
+											&emsp;&emsp;cv2.circle(img,(x,y),10,(255,0,0),-1)<br><br>
 
-												img = np.zeros((512,512,3), np.uint8)<br>
-												cv2.namedWindow('image')<br>
-												cv2.setMouseCallback('image', draw)<br>
-												<br>
-												while(True):<br>
-												&emsp;cv2.imshow('image', img)<br>
-												&emsp;if cv2.waitKey(20) & 0xff == 27:<br>
-												&emsp;&emsp;break<br><br>
-												cv2.destroyAllWindows()
-											</div>
-									   </div>
+											img = np.zeros((512,512,3), np.uint8)<br>
+											cv2.namedWindow('image')<br>
+											cv2.setMouseCallback('image', draw)<br>
+											<br>
+											while(True):<br>
+											&emsp;cv2.imshow('image', img)<br>
+											&emsp;if cv2.waitKey(20) & 0xff == 27:<br>
+											&emsp;&emsp;break<br><br>
+											cv2.destroyAllWindows()
+										</div>
+									</div>
 
-									   <h4>Output</h4>
-										<p>
-											<video width="70%" autoplay controls>
-												<source src="../images/mouse_event.mp4" type="video/mp4">
-												Your browser do not support video tag
-											</video>
-										</p>
+									<h4>Output</h4>
+									<p>
+										<video width="70%" autoplay controls>
+											<source src="../images/mouse_event.mp4" type="video/mp4">
+											Your browser do not support video tag
+										</video>
+									</p>
 									</p>
 
 									<div class="dropdown-divider my-4"></div>
@@ -330,31 +358,31 @@ opencv mouse wheel event">
 				</div>
 			</div>
 			<!-- Amazon ads -->
-            <script type="text/javascript" language="javascript">
-                var aax_size = '300x250';
-                var aax_pubname = 'devakashweb0f-21';
-                var aax_src = '302';
-            </script>
-            <script type="text/javascript" language="javascript"
-                src="https://c.amazon-adsystem.com/aax2/assoc.js"></script>
-            
-            <!-- Amazon ads -->
-            <script type="text/javascript" language="javascript">
-                var aax_size = '300x250';
-                var aax_pubname = 'devakashweb0f-21';
-                var aax_src = '302';
-            </script>
-            <script type="text/javascript" language="javascript"
-                src="https://c.amazon-adsystem.com/aax2/assoc.js"></script> 
-                
-            <!-- Amazon ads -->
-            <script type="text/javascript" language="javascript">
-                var aax_size = '300x250';
-                var aax_pubname = 'devakashweb0f-21';
-                var aax_src = '302';
-            </script>
-            <script type="text/javascript" language="javascript"
-                src="https://c.amazon-adsystem.com/aax2/assoc.js"></script> 
+			<script type="text/javascript" language="javascript">
+				var aax_size = '300x250';
+				var aax_pubname = 'devakashweb0f-21';
+				var aax_src = '302';
+			</script>
+			<script type="text/javascript" language="javascript"
+				src="https://c.amazon-adsystem.com/aax2/assoc.js"></script>
+
+			<!-- Amazon ads -->
+			<script type="text/javascript" language="javascript">
+				var aax_size = '300x250';
+				var aax_pubname = 'devakashweb0f-21';
+				var aax_src = '302';
+			</script>
+			<script type="text/javascript" language="javascript"
+				src="https://c.amazon-adsystem.com/aax2/assoc.js"></script>
+
+			<!-- Amazon ads -->
+			<script type="text/javascript" language="javascript">
+				var aax_size = '300x250';
+				var aax_pubname = 'devakashweb0f-21';
+				var aax_src = '302';
+			</script>
+			<script type="text/javascript" language="javascript"
+				src="https://c.amazon-adsystem.com/aax2/assoc.js"></script>
 		</div>
 	</div>
 	<div class="dropdown-divider my-4"></div>
