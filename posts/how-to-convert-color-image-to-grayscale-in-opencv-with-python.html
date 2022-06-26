@@ -1,16 +1,20 @@
 <!doctype html>
 <html lang="en">
+
 <head>
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta charset="UTF-8">
-	<meta name="description" content="how to convert color image to grayscale in opencv with python by Akash Srivastava">
-	<meta name="keywords" content="OpenCV,How To,Tutorial,Anaconda,Python,Dev akash, akash srivastava,read, read image,cv2, convert color,color image to grayscale, opencv">
+	<meta name="description"
+		content="how to convert color image to grayscale in opencv with python by Akash Srivastava">
+	<meta name="keywords"
+		content="OpenCV,How To,Tutorial,Anaconda,Python,Dev akash, akash srivastava,read, read image,cv2, convert color,color image to grayscale, opencv">
 	<meta name="author" content="Akash Srivastava">
 
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-157256022-1"></script>
@@ -22,16 +26,18 @@
 		gtag('config', 'UA-157256022-1');
 	</script>
 	<script data-ad-client="ca-pub-8197254535741426" async
-	src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8197254535741426"
-     crossorigin="anonymous"></script>
+		crossorigin="anonymous"></script>
 	<title>How to convert Color image to Grayscale in OpenCV with Python - Akash Srivastava</title>
 </head>
+
 <body>
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 		<a class="navbar-brand" href="#">Dev-Akash</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
@@ -58,8 +64,10 @@
 			<div id="list-example" class="list-group sticky-top">
 				<h4 class="my-3">In this article</h4>
 				<a class="list-group-item list-group-item-action" href="#list-item-1">Introduction</a>
-				<a class="list-group-item list-group-item-action" href="#list-item-2">Method 1: Using imread() function</a>
-				<a class="list-group-item list-group-item-action" href="#list-item-3">Method 2: Using cvtColor() function</a>
+				<a class="list-group-item list-group-item-action" href="#list-item-2">Method 1: Using imread()
+					function</a>
+				<a class="list-group-item list-group-item-action" href="#list-item-3">Method 2: Using cvtColor()
+					function</a>
 				<a class="list-group-item list-group-item-action" href="#list-item-4">Conclusion</a>
 			</div>
 		</div>
@@ -89,7 +97,8 @@
 						<ol class="breadcrumb">
 							<li class="breadcrumb-item"><a href="../index.html">Home</a></li>
 							<li class="breadcrumb-item"><a href="../allposts.html">Blogs</a></li>
-							<li class="breadcrumb-item active" aria-current="page">How to convert color image to grayscale in OpenCV</li>
+							<li class="breadcrumb-item active" aria-current="page">How to convert color image to
+								grayscale in OpenCV</li>
 						</ol>
 					</nav>
 					<div class="flex-column">
@@ -98,17 +107,19 @@
 						<span class="badge badge-pill badge-primary p-2 mb-3">Python</span>
 					</div>
 					<h2 id="list-item-1">Introduction</h4>
-						<p>Welcome, In this tutorial we are going to see how to read a image as grayscale as well as we will convert
-							a color image into a grayscale image using opencv and python, if you do not know how to read a image in
+						<p>Welcome, In this tutorial we are going to see how to read a image as grayscale as well as we
+							will convert
+							a color image into a grayscale image using opencv and python, if you do not know how to read
+							a image in
 							opencv, do check out this post <a href="./how-to-read-image-in-opencv.html">here</a>.
 						</p>
 						<p>
 							So to convert a color image to a grayscale image in opencv, we can have two solution
-							<ul>
-								<li>Convert image to grayscale with <strong>imread()</strong> function</li>
-								<li>Convert image to grayscale using <strong>cvtColor()</strong> function</li>
-							</ul>
-							Let's discover how to do it with above mentioned functions...
+						<ul>
+							<li>Convert image to grayscale with <strong>imread()</strong> function</li>
+							<li>Convert image to grayscale using <strong>cvtColor()</strong> function</li>
+						</ul>
+						Let's discover how to do it with above mentioned functions...
 						</p>
 
 						<!-- Ads Here -->
@@ -126,37 +137,41 @@
 
 						<h2 id="list-item-2">Method 1: Using imread() function</h4>
 							<p>
-								<strong>imread()</strong> function is used to read an image in OpenCV but there is one more parameter to be
-								considerd, that is <strong>flag</strong> which decides the way image is read. There three flag defined in
+								<strong>imread()</strong> function is used to read an image in OpenCV but there is one
+								more parameter to be
+								considerd, that is <strong>flag</strong> which decides the way image is read. There
+								three flag defined in
 								OpenCV..
-								<ol>
-									<li>cv2.IMREAD_COLOR or 1</li>
-									<li>cv2.IMREAD_GRAYSCALE or 0</li>
-									<li>cv2.IMREAD_UNCHANGED or -1</li>
-								</ol>
-								So to convert the color image to grayscale we will be using <strong>cv2.imread("image-name.png",0)</strong> or
-								you can also write <strong>cv2.IMREAD_GRAYSCALE</strong> in the place of 0 as it also denotes the same
-								constant.<br><br>
+							<ol>
+								<li>cv2.IMREAD_COLOR or 1</li>
+								<li>cv2.IMREAD_GRAYSCALE or 0</li>
+								<li>cv2.IMREAD_UNCHANGED or -1</li>
+							</ol>
+							So to convert the color image to grayscale we will be using
+							<strong>cv2.imread("image-name.png",0)</strong> or
+							you can also write <strong>cv2.IMREAD_GRAYSCALE</strong> in the place of 0 as it also
+							denotes the same
+							constant.<br><br>
 
-								<div class="card text-white bg-dark mb-3">
-									<div class="card-header h5">Code</div>
-									<div class="card-body">
-										<!--h5 class="card-title">Dark card title</h5-->
-										import cv2<br><br>
+							<div class="card text-white bg-dark mb-3">
+								<div class="card-header h5">Code</div>
+								<div class="card-body">
+									<!--h5 class="card-title">Dark card title</h5-->
+									import cv2<br><br>
 
-										<span style="color: green"># Reading color image as grayscale</span><br>
-										gray = cv2.imread("color-img.png",0)<br><br>
+									<span style="color: green"># Reading color image as grayscale</span><br>
+									gray = cv2.imread("color-img.png",0)<br><br>
 
-										<span style="color: green"># Showing grayscale image</span><br>
-										cv2.imshow("Grayscale Image", gray)<br><br>
+									<span style="color: green"># Showing grayscale image</span><br>
+									cv2.imshow("Grayscale Image", gray)<br><br>
 
-										<span style="color: green"># waiting for key event</span><br>
-										cv2.waitKey(0)<br><br>
+									<span style="color: green"># waiting for key event</span><br>
+									cv2.waitKey(0)<br><br>
 
-										<span style="color: green"># destroying all windows</span><br>
-										cv2.destroyAllWindows()<br><br>
-									</div>
+									<span style="color: green"># destroying all windows</span><br>
+									cv2.destroyAllWindows()<br><br>
 								</div>
+							</div>
 							</p>
 
 							<!-- Ads Here -->
@@ -174,8 +189,10 @@
 
 							<h2 id="list-item-3">Method 2: Using cvtColor() function</h4>
 								<p>
-									<strong>cvtColor()</strong> function in OpenCV is very helpful in converting color channels from one to
-									another such as BRG to HSV or BRG to RGB. The same method can be used to convert BRG to GRAY by using the
+									<strong>cvtColor()</strong> function in OpenCV is very helpful in converting color
+									channels from one to
+									another such as BRG to HSV or BRG to RGB. The same method can be used to convert BRG
+									to GRAY by using the
 									<strong>cv2.cvtColor(img,cv2.BGR2GRAY)</strong><br><br>
 								</p>
 								<div class="card text-white bg-dark mb-3">
@@ -187,7 +204,8 @@
 										<span style="color: green"># Reading color image</span><br>
 										img = cv2.imread("color-img.png")<br><br>
 
-										<span style="color: green"># Converting color image to grayscale image</span><br>
+										<span style="color: green"># Converting color image to grayscale
+											image</span><br>
 										gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)<br><br>
 
 										<span style="color: green"># Showing the converted image</span><br>
@@ -206,9 +224,12 @@
 
 								<h2 id="list-item-4">Conclusion</h4>
 									<p>
-										In this post we came to know two ways in which we can convert a color image to a grayscale image and came
-										across the function like <strong>cvtColor()</strong> and <strong>imread() flags</strong> used in opencv to
-										perform that conversion. If you want to read more articles related to OpenCV <a href="../allposts.html">click here</a>
+										In this post we came to know two ways in which we can convert a color image to a
+										grayscale image and came
+										across the function like <strong>cvtColor()</strong> and <strong>imread()
+											flags</strong> used in opencv to
+										perform that conversion. If you want to read more articles related to OpenCV <a
+											href="../allposts.html">click here</a>
 									</p>
 									<div class="dropdown-divider my-4"></div>
 									<div class="col-sm-6">
@@ -219,62 +240,66 @@
 											<div class="card-body">
 												<h5 class="card-title">Dev-Akash</h5>
 												<p class="card-text">A Computer Vision Enthusiast</p>
-												<a href="https://github.com/dev-akash" class="btn btn-primary">View Profile</a>
+												<a href="https://github.com/dev-akash" class="btn btn-primary">View
+													Profile</a>
 											</div>
 										</div>
 									</div>
-									<a class="btn btn-outline-primary rounded mt-5 col-sm-2 mx-auto" href="#">Back To Top</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-3 p-2 bg-white">
-							<h4 class="my-3">Recommended</h4>
-							<div class="card text-white bg-dark mb-3">
-								<div class="card-header">Blog</div>
-								<div class="card-body">
-									<h5 class="card-title">How to install opencv on windows</h5>
-									<p class="card-text">Welcome! In this post I am going to describ how to install OpenCV, an open-source library for computer vision in python on Windows</p>
-									<a class="btn btn-primary" href="./how-to-install-opencv-python-on-windows.html">Read More</a>
-								</div>
-							</div>
-							<div class="card text-white bg-dark mb-3">
-								<div class="card-header">Blog</div>
-								<div class="card-body">
-									<h5 class="card-title">How to listen mouse events in OpenCV</h5>
-									<p class="card-text">So in this tutorial we will create a small application which will draw the path followed by the mouse pointer on the canvas.</p>
-									<a class="btn btn-primary" href="./how-to-listen-mouse-events-in-opencv.html">Read More</a>
-								</div>
-							</div>
-							<!-- Amazon ads -->
-							<script type="text/javascript" language="javascript">
-								var aax_size = '300x250';
-								var aax_pubname = 'devakashweb0e-21';
-								var aax_src = '302';
-							</script>
-							<script type="text/javascript" language="javascript"
-								src="https://c.amazon-adsystem.com/aax2/assoc.js"></script>
-							
-							<!-- Amazon ads -->
-							<script type="text/javascript" language="javascript">
-								var aax_size = '300x250';
-								var aax_pubname = 'devakashweb0e-21';
-								var aax_src = '302';
-							</script>
-							<script type="text/javascript" language="javascript"
-								src="https://c.amazon-adsystem.com/aax2/assoc.js"></script> 
-								
-							<!-- Amazon ads -->
-							<script type="text/javascript" language="javascript">
-								var aax_size = '300x250';
-								var aax_pubname = 'devakashweb0e-21';
-								var aax_src = '302';
-							</script>
-							<script type="text/javascript" language="javascript"
-								src="https://c.amazon-adsystem.com/aax2/assoc.js"></script> 
-							<!-- Ads Here -->
-							<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
-							<!-- first_add -->
-							<!-- <ins class="adsbygoogle"
+									<a class="btn btn-outline-primary rounded mt-5 col-sm-2 mx-auto" href="#">Back To
+										Top</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-3 p-2 bg-white">
+			<h4 class="my-3">Recommended</h4>
+			<div class="card text-white bg-dark mb-3">
+				<div class="card-header">Blog</div>
+				<div class="card-body">
+					<h5 class="card-title">How to install opencv on windows</h5>
+					<p class="card-text">Welcome! In this post I am going to describ how to install OpenCV, an
+						open-source library for computer vision in python on Windows</p>
+					<a class="btn btn-primary" href="./how-to-install-opencv-python-on-windows.html">Read More</a>
+				</div>
+			</div>
+			<div class="card text-white bg-dark mb-3">
+				<div class="card-header">Blog</div>
+				<div class="card-body">
+					<h5 class="card-title">How to listen mouse events in OpenCV</h5>
+					<p class="card-text">So in this tutorial we will create a small application which will draw the path
+						followed by the mouse pointer on the canvas.</p>
+					<a class="btn btn-primary" href="./how-to-listen-mouse-events-in-opencv.html">Read More</a>
+				</div>
+			</div>
+			<!-- Amazon ads -->
+			<script type="text/javascript" language="javascript">
+				var aax_size = '300x250';
+				var aax_pubname = 'devakashweb0f-21';
+				var aax_src = '302';
+			</script>
+			<script type="text/javascript" language="javascript"
+				src="https://c.amazon-adsystem.com/aax2/assoc.js"></script>
+
+			<!-- Amazon ads -->
+			<script type="text/javascript" language="javascript">
+				var aax_size = '300x250';
+				var aax_pubname = 'devakashweb0f-21';
+				var aax_src = '302';
+			</script>
+			<script type="text/javascript" language="javascript"
+				src="https://c.amazon-adsystem.com/aax2/assoc.js"></script>
+
+			<!-- Amazon ads -->
+			<script type="text/javascript" language="javascript">
+				var aax_size = '300x250';
+				var aax_pubname = 'devakashweb0f-21';
+				var aax_src = '302';
+			</script>
+			<script type="text/javascript" language="javascript"
+				src="https://c.amazon-adsystem.com/aax2/assoc.js"></script>
+			<!-- Ads Here -->
+			<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+			<!-- first_add -->
+			<!-- <ins class="adsbygoogle"
 								 style="display:block"
 								 data-ad-client="ca-pub-8197254535741426"
 								 data-ad-slot="6773757685"
@@ -283,42 +308,49 @@
 							<script>
 								 (adsbygoogle = window.adsbygoogle || []).push({});
 							</script> -->
-						</div>
-					</div>
-					<div class="dropdown-divider my-4"></div>
-					<div class="container">
-						<div class="d-sm-flex flex-row my-3">
-							<div class="col-sm-4 text-center flex-col">
-								<div class="h3">Dev-Akash</div>
-								<div> &copy; 2019-21</div>
-							</div>
-							<div class="col-sm-4 text-center flex-column">
-								<div class="h4">References</div>
-								<div>
-									<a href="../allposts.html">Blogs</a>
-								</div>
-								<div>
-									<a href="../projects.html">Projects</a>
-								</div>
-							</div>
-							<div class="col-sm-4 text-center flex-column">
-								<div class="h4">About</div>
-								<div>
-									<a href="mail:sriakash.dev@gmail.com">Contact</a>
-								</div>
-								<div>
-									<a href="../privacy_policy.html">Privacy</a>
-								</div>
-								<div>
-									<a href="../terms-and-conditions.html">Terms</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Optional JavaScript -->
-					<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-					<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-					<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-					<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-				</body>
-				</html>
+		</div>
+	</div>
+	<div class="dropdown-divider my-4"></div>
+	<div class="container">
+		<div class="d-sm-flex flex-row my-3">
+			<div class="col-sm-4 text-center flex-col">
+				<div class="h3">Dev-Akash</div>
+				<div> &copy; 2019-21</div>
+			</div>
+			<div class="col-sm-4 text-center flex-column">
+				<div class="h4">References</div>
+				<div>
+					<a href="../allposts.html">Blogs</a>
+				</div>
+				<div>
+					<a href="../projects.html">Projects</a>
+				</div>
+			</div>
+			<div class="col-sm-4 text-center flex-column">
+				<div class="h4">About</div>
+				<div>
+					<a href="mail:sriakash.dev@gmail.com">Contact</a>
+				</div>
+				<div>
+					<a href="../privacy_policy.html">Privacy</a>
+				</div>
+				<div>
+					<a href="../terms-and-conditions.html">Terms</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
