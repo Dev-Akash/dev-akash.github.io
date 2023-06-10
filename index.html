@@ -1,175 +1,884 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-157256022-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'UA-157256022-1');
-	</script>
-
-	<script data-ad-client="ca-pub-8197254535741426" async
-		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dev-Akash</title>
 	<meta charset="UTF-8">
 	<meta name="description"
 		content="Hi, I am a student and a enthusiastic programmer having interest in Research in domain of computer vision and machine learning, I usually do projects for the same, This is my profile.">
 	<meta name="keywords" content="Dev akash, akash srivastava,Neutral TheCoder,Akash Srivastava">
 	<meta name="author" content="Akash Srivastava">
-	<link rel="icon" type="image/png" href="logos/akash-logo.png">
-	<link rel="stylesheet" type="text/css" href="newStyle.css">
-	<title>Akash Srivastava</title>
+	<link rel="stylesheet" type="text/css" href="theme.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
-<body>
-	<div class="header">
-		<div class="home">
-			<a href="https://dev-akash.github.io/index.html"><img src="logos/akash-logo.png" alt="logo"></a>
+<body class="site_background h-100">
+	<img style="position: absolute; z-index: -1; width: 100%; height: 100vh; object-fit: cover; object-position: center;"
+		src="https://images.pexels.com/photos/1585634/pexels-photo-1585634.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+		alt="">
+	<nav class="d-sm-flex text-center justify-content-between p-5">
+		<strong>Dev Akash</strong>
+		<ul class="d-flex mt-3 mt-md-0" style="list-style: none; padding: 0px;">
+			<li role="button" class="me-3" onclick="showHome()">Home</li>
+			<li role="button" class="me-3" onclick="showAbout()">About</li>
+			<li role="button" class="me-3" onclick="showSkills()">Skills</li>
+			<li role="button" class="me-3" onclick="showPortfolio()">Portfolio</li>
+			<li role="button" class="me-3" onclick="showBlogs()">Blogs</li>
+		</ul>
+	</nav>
+	<div id="home" class="ms-5"
+		style="opacity: 1;position: absolute; top: 50%; transform: translate(0,-50%); transition: opacity 1s;">
+		<div class="display-1">
+			<span class="text-start">
+				I'm <br>
+				<span>Akash Srivastava</span>
+			</span>
 		</div>
-		<h1>Akash Srivastava</h1>
-	</div>
-
-	<div class="status">
-		<div class="holdit">
-			<img src="images/image.jpg" alt="profile" class="profile_pic">
+		<div>
+			<span class="text-start">
+				Software Engineer @SeawoodsVentures
+			</span>
 		</div>
-		<div class="loader"></div>
+		<button class="mt-3 fs-4 px-3 py-2" style="border: none; outline: none;">
+			Hire Me
+		</button>
 	</div>
 
-	<div class="show">
-		<a href="https://dev-akash.github.io/skills.html">
-			<div class="branch">
-				<img src="images/skills.png" alt="about me">
-				<div class="texty ">Skills</div>
+	<section id="aboutSection" class="glassCard p-3">
+		<span class="fs-1" style="font-weight: 100;">About Me</span>
+		<p class="mt-3" style="font-weight: 100;">I'm currently a SDE @Seawoods Ventures Inc. Have graduated in
+			Bachelors of Technology, with domain of Automation and Robotics. </p>
+		<p style="font-weight: 100;">I'm a person who believe more in character, then skill set, as skills are like
+			tools but character of a person are those hands which will pick those tools. Keeping that in mind I have
+			strong principles and ethics which help me to acquire any skill over the period of time and build whatever I
+			want to.</p>
+		<span class="d-block mt-3 fs-3" style="font-weight: 100;">Experience</span>
+		<div class="experienceCard mt-3 p-3 border-start">
+			<strong class="fs-5">Software Engineer</strong><br>
+			<span style="opacity: 0.8;">@Seawoods Ventures Inc.</span><br>
+			<span style="font-size: 12px; opacity: 0.5;">July 2021 - Current</span>
+			<p style="font-weight: 100;">
+				Currently working here. Providing services with skills of Angular, React, Firebase, MERN stack, UI/UX
+				designs and many more
+			</p>
+		</div>
+		<div class="experienceCard mt-3 p-3 border-end text-end">
+			<strong class="fs-5">Android Developer</strong><br>
+			<span style="opacity: 0.8;">@Freelance</span><br>
+			<span style="font-size: 12px; opacity: 0.5;">Dec 2020 - Feb, 2021</span>
+			<p style="font-weight: 100;">
+				Currently working here. Providing services with skills of Angular, React, Firebase, MERN stack, UI/UX
+				designs and many more
+			</p>
+		</div>
+		<div class="experienceCard mt-3 p-3 border-start">
+			<strong class="fs-5">Web Developer Intern</strong><br>
+			<span style="opacity: 0.8;">@IIT Bombay</span><br>
+			<span style="font-size: 12px; opacity: 0.5;">Jan 2020 - April, 2020</span>
+			<p style="font-weight: 100;">
+				Currently working here. Providing services with skills of Angular, React, Firebase, MERN stack, UI/UX
+				designs and many more
+			</p>
+		</div>
+		<span class="d-block mt-3 fs-3" style="font-weight: 100;">Interests</span>
+		<div class="row p-2 d-flex" cl>
+			<div class="p-1 p-md-1 col-md-3 col-6">
+				<div class="interestCard p-3">
+					Programming
+				</div>
 			</div>
-		</a>
-
-		<a href="https://dev-akash.github.io/projects.html">
-			<div class="branch">
-				<img src="images/project.png" alt="about me">
-				<div class="texty ">Projects</div>
+			<div class="p-1 p-md-1 col-md-3 col-6">
+				<div class="interestCard p-3">
+					Music
+				</div>
 			</div>
-		</a>
-
-		<a href="https://dev-akash.github.io/knowledge.html">
-			<div class="branch">
-				<img src="images/knowledge.png" alt="about me">
-				<div class="texty ">Education</div>
+			<div class="p-1 p-md-1 col-md-3 col-6">
+				<div class="interestCard p-3">
+					Yoga
+				</div>
 			</div>
-		</a>
-		<a href="https://dev-akash.github.io/about_me.html">
-			<div class="branch">
-				<img src="images/me.png" alt="about me">
-				<div class="texty ">About Me</div>
+			<div class="p-1 p-md-1 col-md-3 col-6">
+				<div class="interestCard p-3">
+					Science
+				</div>
 			</div>
-		</a>
-	</div>
-
-	<div class="contact">
-		<center>
-			<h1>Latest Posts</h1>
-			<center>
-
-				<div class="post">
-					<center>
-						<h2>Edge Detection in OpenCV</h2>
-					</center>
-					<p>In this blog, we are going to understand that, what is edge detection and why it is used in image processing, and then we would talk about the most widely used technique of edge detection i.e., Canny Edge detection, and finally we will code Canny Edge detection using OpenCV's Canny() function.</p>
-					<a href="https://dev-akash.github.io/posts/edge-detection-in-opencv.html">Read
-						more</a>...
+			<div class="p-1 p-md-1 col-md-3 col-6">
+				<div class="interestCard p-3">
+					UI/UX design
 				</div>
-
-				<div class="post">
-					<center>
-						<h2>How To Add a View programmatically in Android</h2>
-					</center>
-					<p>Many times we come accross a problem in Android, where we need to create a feature of adding a
-						view when a button is pressed, for instance, adding a new EditText view when a add button in a
-						todo list application.So, today we will go through how to create this feature in an android
-						application. I hope before reading this article, you are familar with the coding in android and
-						know how to create views and attach callback listeners to it.</p>
-					<a
-						href="https://dev-akash.github.io/posts/how-to-add-a-view-programmatically-in-android-using-java.html">Read
-						more</a>...
+			</div>
+			<div class="p-1 p-md-1 col-md-3 col-6">
+				<div class="interestCard p-3">
+					AI & ML
 				</div>
-
-				<div class="post">
-					<center>
-						<h2>How to Bulk Rename Files</h2>
-					</center>
-					<p>So, most of the time we encounter a situation for renaming the files in large quantity, persons
-						who
-						create datasets to the persons who just want to organise a folder with some conventional names.
-						To make
-						this hectic task more convinent</p>
-					<a href="https://dev-akash.github.io/posts/how-to-bulk-rename-files.html">Read more</a>...
+			</div>
+			<div class="p-1 p-md-1 col-md-3 col-6">
+				<div class="interestCard p-3">
+					Robotics
 				</div>
-
-				<div class="post">
-					<center>
-						<h2>Getting Started with Videos in OpenCV</h2>
-					</center>
-					<p>Hi there, and welcome again to Dev-akash's blog post, so today we will be getting started with
-						videos in OpenCV, and will be learning about the following things: </p>
-					<a href="https://dev-akash.github.io/posts/getting-started-with-videos-in-opencv.html">Read
-						more</a>...</p>
+			</div>
+			<div class="p-1 p-md-1 col-md-3 col-6">
+				<div class="interestCard p-3">
+					Technology
 				</div>
+			</div>
+		</div>
+	</section>
 
-				<div class="post">
-					<center>
-						<h2>How to listen mouse events in OpenCV</h2>
-					</center>
-					<p>In this post will be haveing a illustration of an app on how the mouse events work in opencv and
-						will provide a light on callback function and the cv2.setMouseCallback() function</p><a
-						href="https://dev-akash.github.io/posts/how-to-listen-mouse-events-in-opencv.html">Read
-						more</a>...
+	<section id="skills" class="glassCard p-3">
+		<span class="fs-1" style="font-weight: 100;">Skills</span>
+		<p class="mt-3" style="font-weight: 100;">This is a generic portfolio, so considering all the skills that I
+			think I'm good at.</p>
+		<div class="experienceCard p-3 border-start">
+			<span class="d-block mt-3 fs-3" style="font-weight: 100;">Programming Languages</span>
+			<div class="row p-2 d-flex" cl>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Java
+					</div>
 				</div>
-
-				<div class="post">
-					<center>
-						<h2>How to convert color image to grayscale in opencv with python</h2>
-					</center>
-					<p>In this tutorial we are going to see how to read a image as grayscale as well as we will convert
-						a color image into a grayscale image using opencv and python, if you do not know how to read a
-						image in opencv </p> <a
-						href="https://dev-akash.github.io/posts/how-to-convert-color-image-to-grayscale-in-opencv-with-python.html">Read
-						more</a>...
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Javascript
+					</div>
 				</div>
-
-				<div class="post">
-					<center>
-						<h2>How to read image in OpenCV</h2>
-					</center>
-					<p>Welcome! In this post I am going to describ how to read image in OpenCV.</p><a
-						href="https://dev-akash.github.io/posts/how-to-read-image-in-opencv.html">Read more</a>...
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Typescript
+					</div>
 				</div>
-
-				<br>
-
-				<div class="readmore">
-					<a class="button" href="https://dev-akash.github.io/allposts.html">More Posts</a>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Python
+					</div>
 				</div>
+			</div>
+		</div>
+		<div class="experienceCard p-3 mt-3 border-start">
+			<span class="d-block mt-3 fs-3" style="font-weight: 100;">Frontend Development</span>
+			<div class="row p-2 d-flex" cl>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						React
+					</div>
+				</div>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Angular
+					</div>
+				</div>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Bootstrap
+					</div>
+				</div>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						CSS
+					</div>
+				</div>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						HTML
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="experienceCard p-3 mt-3 border-start">
+			<span class="d-block mt-3 fs-3" style="font-weight: 100;">Backend Development</span>
+			<div class="row p-2 d-flex" cl>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Node JS
+					</div>
+				</div>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Flask
+					</div>
+				</div>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Express
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="experienceCard p-3 mt-3 border-start">
+			<span class="d-block mt-3 fs-3" style="font-weight: 100;">Mobile App Development</span>
+			<div class="row p-2 d-flex" cl>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Android
+					</div>
+				</div>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Flutter
+					</div>
+				</div>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Dart
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="experienceCard p-3 mt-3 border-start">
+			<span class="d-block mt-3 fs-3" style="font-weight: 100;">AI/ML</span>
+			<div class="row p-2 d-flex" cl>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Tensorflow
+					</div>
+				</div>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Pytorch
+					</div>
+				</div>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Pandas
+					</div>
+				</div>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Numpy
+					</div>
+				</div>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						OpenCV
+					</div>
+				</div>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Scikit Learn
+					</div>
+				</div>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Matplotlib
+					</div>
+				</div>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Seaborn
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="experienceCard p-3 mt-3 border-start">
+			<span class="d-block mt-3 fs-3" style="font-weight: 100;">Database</span>
+			<div class="row p-2 d-flex" cl>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						MongoDB
+					</div>
+				</div>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Sqlite
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="experienceCard p-3 mt-3 border-start">
+			<span class="d-block mt-3 fs-3" style="font-weight: 100;">Data Visualization</span>
+			<div class="row p-2 d-flex" cl>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Chart JS
+					</div>
+				</div>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Canvas JS
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="experienceCard p-3 mt-3 border-start">
+			<span class="d-block mt-3 fs-3" style="font-weight: 100;">DevOps</span>
+			<div class="row p-2 d-flex" cl>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Kubernetes
+					</div>
+				</div>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						GCP
+					</div>
+				</div>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						AWS
+					</div>
+				</div>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Docker
+					</div>
+				</div>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Travis CI
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="experienceCard p-3 mt-3 border-start">
+			<span class="d-block mt-3 fs-3" style="font-weight: 100;">Backend as a service</span>
+			<div class="row p-2 d-flex" cl>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Firebase
+					</div>
+				</div>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Heroku
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="experienceCard p-3 mt-3 border-start">
+			<span class="d-block mt-3 fs-3" style="font-weight: 100;">Software</span>
+			<div class="row p-2 d-flex" cl>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Adobe XD
+					</div>
+				</div>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Blender
+					</div>
+				</div>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Postman
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="experienceCard p-3 mt-3 border-start">
+			<span class="d-block mt-3 fs-3" style="font-weight: 100;">Game Development</span>
+			<div class="row p-2 d-flex" cl>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Unity
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="experienceCard p-3 mt-3 border-start">
+			<span class="d-block mt-3 fs-3" style="font-weight: 100;">Others</span>
+			<div class="row p-2 d-flex" cl>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Git
+					</div>
+				</div>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Linux
+					</div>
+				</div>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Arduino
+					</div>
+				</div>
+				<div class="p-1 p-md-1 col-md-3 col-6">
+					<div class="interestCard p-3">
+						Raspberry Pi
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-				<div class="seprator"></div>
-				<center>
-					<h2 style="color: white;">Contact</h2>
-					<center>
-						<div class="social">
-							<a href="https://www.linkedin.com/in/akashsrivastava995"><img src="logos/linkedin.png"
-									alt="linkedin" height=48px></a>
-							<a href="mailto:akashsrivastava995@gmail.com"><img src="logos/gmail.png" alt="gmail"></a>
-							<a href="https://github.com/Dev-Akash/"><img src="logos/github.png" alt="github" width=120px
-									height=48px></a>
+	<section id="portfolio" class="glassCard p-3">
+		<span class="fs-1" style="font-weight: 100;">Portfolio</span>
+		<!-- <div class="mt-3">
+			<ul class="d-flex mx-auto align-items-center justify-content-start"
+				style="list-style: none; padding: 0px; overflow: scroll;">
+				<li class="me-3 px-3 py-1 rounded-pill bg-primary">All</li>
+				<li class="me-3">Android</li>
+				<li class="me-3">Games</li>
+				<li class="me-3">AI/ML</li>
+				<li class="me-3">Web</li>
+				<li class="me-3">Robotics</li>
+				<li class="me-3">Software</li>
+			</ul>
+		</div> -->
+		<div class="row">
+			<div class="col-md-6 mt-3">
+				<div class="experienceCard p-3 border-start">
+					<span class="d-block fs-3" style="font-weight: 100;">UniQR</span>
+					<p style="font-weight: 100;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
+						laboriosam rerum, esse saepe aspernatur voluptatem debitis molestiae, sit quis repellendus
+						blanditiis suscipit maiores, atque doloribus sunt reiciendis dolor? Exercitationem, maxime.</p>
+					<a style="text-decoration: none;"
+						href="https://play.google.com/store/apps/details?id=srivastava995.akash.bbc" target="_blank">
+						<div class="d-flex align-items-center">
+							<span class="d-block">View Project</span>
+							<span class="d-block material-symbols-outlined">
+								arrow_outward
+							</span>
 						</div>
-						<div class="footer">
-							<a href="./privacy_policy.html" target="_blank">Privacy Policy</a>
-							<a href="./terms-and-conditions.html" target="_blank">Terms and Conditions</a>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-6 mt-3">
+				<div class="experienceCard p-3 border-start">
+					<span class="d-block fs-3" style="font-weight: 100;">Slippingo</span>
+					<p style="font-weight: 100;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
+						laboriosam rerum, esse saepe aspernatur voluptatem debitis molestiae, sit quis repellendus
+						blanditiis suscipit maiores, atque doloribus sunt reiciendis dolor? Exercitationem, maxime.</p>
+					<a style="text-decoration: none;"
+						href="https://play.google.com/store/apps/details?id=com.sriakash.dev.Slippingo" target="_blank">
+						<div class="d-flex align-items-center">
+							<span class="d-block">View Project</span>
+							<span class="d-block material-symbols-outlined">
+								arrow_outward
+							</span>
 						</div>
-	</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-6 mt-3">
+				<div class="experienceCard p-3 border-start">
+					<span class="d-block fs-3" style="font-weight: 100;">Classroom Attendance Marking System</span>
+					<p style="font-weight: 100;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
+						laboriosam rerum, esse saepe aspernatur voluptatem debitis molestiae, sit quis repellendus
+						blanditiis suscipit maiores, atque doloribus sunt reiciendis dolor? Exercitationem, maxime.</p>
+				</div>
+			</div>
+			<div class="col-md-6 mt-3">
+				<div class="experienceCard p-3 border-start">
+					<span class="d-block fs-3" style="font-weight: 100;">Replication of the human hand motion in Real
+						time</span>
+					<p style="font-weight: 100;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
+						laboriosam rerum, esse saepe aspernatur voluptatem debitis molestiae, sit quis repellendus
+						blanditiis suscipit maiores, atque doloribus sunt reiciendis dolor? Exercitationem, maxime.</p>
+				</div>
+			</div>
+			<div class="col-md-6 mt-3">
+				<div class="experienceCard p-3 border-start">
+					<span class="d-block fs-3" style="font-weight: 100;">Face Detection Using Supervised Machine
+						Learning</span>
+					<p style="font-weight: 100;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
+						laboriosam rerum, esse saepe aspernatur voluptatem debitis molestiae, sit quis repellendus
+						blanditiis suscipit maiores, atque doloribus sunt reiciendis dolor? Exercitationem, maxime.</p>
+				</div>
+			</div>
+			<div class="col-md-6 mt-3">
+				<div class="experienceCard p-3 border-start">
+					<span class="d-block fs-3" style="font-weight: 100;">MNIST Digit Recognition</span>
+					<p style="font-weight: 100;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
+						laboriosam rerum, esse saepe aspernatur voluptatem debitis molestiae, sit quis repellendus
+						blanditiis suscipit maiores, atque doloribus sunt reiciendis dolor? Exercitationem, maxime.</p>
+				</div>
+			</div>
+			<div class="col-md-6 mt-3">
+				<div class="experienceCard p-3 border-start">
+					<span class="d-block fs-3" style="font-weight: 100;">Skin Cancer MNIST Recognition: HAM10000</span>
+					<p style="font-weight: 100;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
+						laboriosam rerum, esse saepe aspernatur voluptatem debitis molestiae, sit quis repellendus
+						blanditiis suscipit maiores, atque doloribus sunt reiciendis dolor? Exercitationem, maxime.</p>
+				</div>
+			</div>
+			<div class="col-md-6 mt-3">
+				<div class="experienceCard p-3 border-start">
+					<span class="d-block fs-3" style="font-weight: 100;">Chest X-Ray Images (Pneumonia Detection)</span>
+					<p style="font-weight: 100;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
+						laboriosam rerum, esse saepe aspernatur voluptatem debitis molestiae, sit quis repellendus
+						blanditiis suscipit maiores, atque doloribus sunt reiciendis dolor? Exercitationem, maxime.</p>
+				</div>
+			</div>
+			<div class="col-md-6 mt-3">
+				<div class="experienceCard p-3 border-start">
+					<span class="d-block fs-3" style="font-weight: 100;">Hover Ball</span>
+					<p style="font-weight: 100;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
+						laboriosam rerum, esse saepe aspernatur voluptatem debitis molestiae, sit quis repellendus
+						blanditiis suscipit maiores, atque doloribus sunt reiciendis dolor? Exercitationem, maxime.</p>
+					<a style="text-decoration: none;" href="https://dev-akash.github.io/HoverBall/" target="_blank">
+						<div class="d-flex align-items-center">
+							<span class="d-block">View Project</span>
+							<span class="d-block material-symbols-outlined">
+								arrow_outward
+							</span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-6 mt-3">
+				<div class="experienceCard p-3 border-start">
+					<span class="d-block fs-3" style="font-weight: 100;">Bulkren</span>
+					<p style="font-weight: 100;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
+						laboriosam rerum, esse saepe aspernatur voluptatem debitis molestiae, sit quis repellendus
+						blanditiis suscipit maiores, atque doloribus sunt reiciendis dolor? Exercitationem, maxime.</p>
+					<a style="text-decoration: none;" href="https://pypi.org/project/Bulkren/" target="_blank">
+						<div class="d-flex align-items-center">
+							<span class="d-block">View Project</span>
+							<span class="d-block material-symbols-outlined">
+								arrow_outward
+							</span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-6 mt-3">
+				<div class="experienceCard p-3 border-start">
+					<span class="d-block fs-3" style="font-weight: 100;">Tasker</span>
+					<p style="font-weight: 100;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
+						laboriosam rerum, esse saepe aspernatur voluptatem debitis molestiae, sit quis repellendus
+						blanditiis suscipit maiores, atque doloribus sunt reiciendis dolor? Exercitationem, maxime.</p>
+					<a style="text-decoration: none;" href="https://github.com/Dev-Akash/Tasker" target="_blank">
+						<div class="d-flex align-items-center">
+							<span class="d-block">View Project</span>
+							<span class="d-block material-symbols-outlined">
+								arrow_outward
+							</span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-6 mt-3">
+				<div class="experienceCard p-3 border-start">
+					<span class="d-block fs-3" style="font-weight: 100;">Chromatica</span>
+					<p style="font-weight: 100;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
+						laboriosam rerum, esse saepe aspernatur voluptatem debitis molestiae, sit quis repellendus
+						blanditiis suscipit maiores, atque doloribus sunt reiciendis dolor? Exercitationem, maxime.</p>
+					<a style="text-decoration: none;" href="https://github.com/Dev-Akash/Chromatica" target="_blank">
+						<div class="d-flex align-items-center">
+							<span class="d-block">View Project</span>
+							<span class="d-block material-symbols-outlined">
+								arrow_outward
+							</span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-6 mt-3">
+				<div class="experienceCard p-3 border-start">
+					<span class="d-block fs-3" style="font-weight: 100;">Neon Portfolio</span>
+					<p style="font-weight: 100;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
+						laboriosam rerum, esse saepe aspernatur voluptatem debitis molestiae, sit quis repellendus
+						blanditiis suscipit maiores, atque doloribus sunt reiciendis dolor? Exercitationem, maxime.</p>
+					<a style="text-decoration: none;" href="https://dev-akash.github.io/NeonPortfolio" target="_blank">
+						<div class="d-flex align-items-center">
+							<span class="d-block">View Project</span>
+							<span class="d-block material-symbols-outlined">
+								arrow_outward
+							</span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-6 mt-3">
+				<div class="experienceCard p-3 border-start">
+					<span class="d-block fs-3" style="font-weight: 100;">Jambread UI</span>
+					<p style="font-weight: 100;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
+						laboriosam rerum, esse saepe aspernatur voluptatem debitis molestiae, sit quis repellendus
+						blanditiis suscipit maiores, atque doloribus sunt reiciendis dolor? Exercitationem, maxime.</p>
+					<a style="text-decoration: none;" href="https://dev-akash.github.io/JamBreadUI" target="_blank">
+						<div class="d-flex align-items-center">
+							<span class="d-block">View Project</span>
+							<span class="d-block material-symbols-outlined">
+								arrow_outward
+							</span>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="blogs" class="glassCard p-3">
+		<span class="fs-1" style="font-weight: 100;">Blogs</span>
+		<div class="row">
+
+			<!-- Col 1 -->
+			<div class="col-md-3">
+				<div class="mt-3">
+					<div class="experienceCard p-3 border-start">
+						<span class="d-block fs-3" style="font-weight: 100;">Edge Detection in OpenCV</span>
+						<p style="font-weight: 100;">In this blog, we are going to understand that, what is edge detection and why it is used in image processing, and then we would talk about the most widely used technique of edge detection i.e., Canny Edge detection, and finally we will code Canny Edge detection using OpenCV's Canny() function.</p>
+						<a style="text-decoration: none;" href="https://dev-akash.github.io/posts/edge-detection-in-opencv.html">
+							<div class="d-flex align-items-center">
+								<span class="d-block">Read Blog</span>
+								<span class="d-block material-symbols-outlined">
+									arrow_outward
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="mt-3">
+					<div class="experienceCard p-3 border-start">
+						<span class="d-block fs-3" style="font-weight: 100;">How To Add a View programmatically in Android</span>
+						<p style="font-weight: 100;">This article will make you familar with the coding in android and know how to create views and attach callback listeners to it.</p>
+						<a style="text-decoration: none;" href="https://dev-akash.github.io/posts/how-to-add-a-view-programmatically-in-android-using-java.html">
+							<div class="d-flex align-items-center">
+								<span class="d-block">Read Blog</span>
+								<span class="d-block material-symbols-outlined">
+									arrow_outward
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Col 2 -->
+			<div class="col-md-3">
+				<div class="mt-3">
+					<div class="experienceCard p-3 border-start">
+						<span class="d-block fs-3" style="font-weight: 100;">Getting Started with Videos in OpenCV</span>
+						<p style="font-weight: 100;">Hi there, and welcome again to Dev-akash's blog post, so today we will be getting started with videos in OpenCV,</p>
+						<a style="text-decoration: none;" href="https://dev-akash.github.io/posts/getting-started-with-videos-in-opencv.html">
+							<div class="d-flex align-items-center">
+								<span class="d-block">Read Blog</span>
+								<span class="d-block material-symbols-outlined">
+									arrow_outward
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="mt-3">
+					<div class="experienceCard p-3 border-start">
+						<span class="d-block fs-3" style="font-weight: 100;">How to listen mouse events in OpenCV</span>
+						<p style="font-weight: 100;">In this post will be haveing a illustration of an app on how the mouse events work in opencv and will provide a light on callback function and the cv2.setMouseCallback() function</p>
+						<a style="text-decoration: none;" href="https://dev-akash.github.io/posts/how-to-listen-mouse-events-in-opencv.html">
+							<div class="d-flex align-items-center">
+								<span class="d-block">Read Blog</span>
+								<span class="d-block material-symbols-outlined">
+									arrow_outward
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Col 3 -->
+			<div class="col-md-3">
+				<div class="mt-3">
+					<div class="experienceCard p-3 border-start">
+						<span class="d-block fs-3" style="font-weight: 100;">How to convert color image to grayscale in opencv with python</span>
+						<p style="font-weight: 100;">In this tutorial we are going to see how to read a image as grayscale as well as we will convert a color image into a grayscale image using opencv and python, if you do not know how to read a image in opencv</p>
+						<a style="text-decoration: none;" href="https://dev-akash.github.io/posts/how-to-convert-color-image-to-grayscale-in-opencv-with-python.html">
+							<div class="d-flex align-items-center">
+								<span class="d-block">Read Blog</span>
+								<span class="d-block material-symbols-outlined">
+									arrow_outward
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="mt-3">
+					<div class="experienceCard p-3 border-start">
+						<span class="d-block fs-3" style="font-weight: 100;">How to read image in OpenCV</span>
+						<p style="font-weight: 100;">Welcome! In this post I am going to describe how to read image in OpenCV</p>
+						<a style="text-decoration: none;" href="https://dev-akash.github.io/posts/how-to-read-image-in-opencv.html">
+							<div class="d-flex align-items-center">
+								<span class="d-block">Read Blog</span>
+								<span class="d-block material-symbols-outlined">
+									arrow_outward
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Col 4 -->
+			<div class="col-md-3">
+				<div class="mt-3">
+					<div class="experienceCard p-3 border-start">
+						<span class="d-block fs-3" style="font-weight: 100;">How to install OpenCV in windows</span>
+						<p style="font-weight: 100;">In this post I will be describing procedure to install an open-source Computer Vision library called OpenCV in python on windows</p>
+						<a style="text-decoration: none;" href="https://dev-akash.github.io/posts/how-to-install-opencv-python-on-windows.html">
+							<div class="d-flex align-items-center">
+								<span class="d-block">Read Blog</span>
+								<span class="d-block material-symbols-outlined">
+									arrow_outward
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="mt-3">
+					<div class="experienceCard p-3 border-start">
+						<span class="d-block fs-3" style="font-weight: 100;">How to Bulk Rename Files</span>
+						<p style="font-weight: 100;">So, most of the time we encounter a situation for renaming the files in large quantity, persons who create datasets to the persons who just want to organise a folder with some conventional names. To make this hectic task more convinent</p>
+						<a style="text-decoration: none;" href="https://dev-akash.github.io/posts/how-to-bulk-rename-files.html">
+							<div class="d-flex align-items-center">
+								<span class="d-block">Read Blog</span>
+								<span class="d-block material-symbols-outlined">
+									arrow_outward
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script>
+		var home = document.getElementById('home');
+		var about = document.getElementById('aboutSection');
+		var skills = document.getElementById('skills');
+		var portfolio = document.getElementById('portfolio');
+		var blogs = document.getElementById('blogs');
+
+		var android = [{
+			name: 'UniQR',
+			description: 'No description provided',
+			url: 'https://play.google.com/store/apps/details?id=srivastava995.akash.bbc',
+		}];
+		var games = [{
+			name: 'Slippingo',
+			description: 'No description provided',
+			url: 'https://play.google.com/store/apps/details?id=com.sriakash.dev.Slippingo',
+		},
+		{
+			name: 'Hover Ball',
+			description: 'No description provided',
+			url: 'https://dev-akash.github.io/HoverBall/',
+		}];
+		var ai = [{
+			name: 'Classroom Attendance Marking System',
+			description: 'No description provided',
+			url: null,
+		},
+		{
+			name: 'Face Detection Using Supervised Machine Learning',
+			description: 'No description provided',
+			url: null,
+		},
+		{
+			name: 'MNIST Digit Recognition',
+			description: 'No description provided',
+			url: null,
+		},
+		{
+			name: 'Skin Cancer MNIST Recognition: HAM10000',
+			description: 'No description provided',
+			url: null,
+		},
+		{
+			name: 'Chest X-Ray Images (Pneumonia Detection)',
+			description: 'No description provided',
+			url: null,
+		}];
+		var web = [{
+			name: 'Tasker',
+			description: 'No description provided',
+			url: 'https://github.com/Dev-Akash/Tasker',
+		},
+		{
+			name: 'Neon Portfolio',
+			description: 'No description provided',
+			url: 'https://dev-akash.github.io/NeonPortfolio',
+		},
+		{
+			name: 'Jambread UI',
+			description: 'No description provided',
+			url: 'https://dev-akash.github.io/JamBreadUI',
+		}];
+		var robotics = [{
+			name: 'Replication of the human hand motion in Real time',
+			description: 'No description provided',
+			url: null,
+		}];
+		var software = [{
+			name: 'Bulkren',
+			description: 'No description provided',
+			url: 'https://pypi.org/project/Bulkren/',
+		},
+		{
+			name: 'Chromatica',
+			description: 'No description provided',
+			url: 'https://github.com/Dev-Akash/Chromatica',
+		}];
+		function showAbout() {
+			home.style.opacity = '0';
+			about.style.opacity = '1';
+			about.style.top = '150px';
+			skills.style.opacity = '0';
+			skills.style.top = '800px';
+			portfolio.style.opacity = '0';
+			portfolio.style.top = '800px';
+			blogs.style.opacity = '0';
+			blogs.style.top = '800px';
+		}
+
+		function showHome() {
+			home.style.opacity = '1';
+			about.style.top = '800px';
+			about.style.opacity = '0';
+			skills.style.top = '800px';
+			skills.style.opacity = '0';
+			portfolio.style.opacity = '0';
+			portfolio.style.top = '800px';
+			blogs.style.opacity = '0';
+			blogs.style.top = '800px';
+		}
+
+		function showSkills() {
+			home.style.opacity = '0';
+			about.style.opacity = '0';
+			about.style.top = '800px';
+			portfolio.style.opacity = '0';
+			portfolio.style.top = '800px';
+			blogs.style.opacity = '0';
+			blogs.style.top = '800px';
+			skills.style.opacity = '1';
+			skills.style.top = '150px';
+		}
+
+		function showPortfolio() {
+			home.style.opacity = '0';
+			about.style.opacity = '0';
+			about.style.top = '800px';
+			skills.style.opacity = '0';
+			skills.style.top = '800px';
+			blogs.style.opacity = '0';
+			blogs.style.top = '800px';
+			portfolio.style.opacity = '1';
+			portfolio.style.top = '150px';
+		}
+
+		function showBlogs() {
+			home.style.opacity = '0';
+			about.style.opacity = '0';
+			about.style.top = '800px';
+			skills.style.opacity = '0';
+			skills.style.top = '800px';
+			portfolio.style.opacity = '0';
+			portfolio.style.top = '800px';
+			blogs.style.opacity = '1';
+			blogs.style.top = '150px';
+		}
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
 </body>
 
 </html>
