@@ -3,9 +3,9 @@ var about = document.getElementById('aboutSection');
 var skills = document.getElementById('skillSection');
 var portfolio = document.getElementById('portfolioSection');
 var blogs = document.getElementById('blogsSection');
+var blogPost = document.getElementById('blogPost');
 
 window.addEventListener('load', () => {
-    console.log('pingLoad');
     var val = window.location.href.substring(window.location.href.indexOf('#')+1);
     switch(val){
         case 'home': showHome(); break;
@@ -13,10 +13,10 @@ window.addEventListener('load', () => {
         case 'skills': showSkills(); break;
         case 'portfolio': showPortfolio(); break;
         case 'blogs': showBlogs(); break;
+        default: checkHomeOrPost(); break;
     }
-})
+});
 window.addEventListener('hashchange', function (event) {
-    console.log('pingHash')
     var val = event.newURL.substring(event.newURL.indexOf('#')+1);
     switch(val){
         case 'home': showHome(); break;
@@ -24,8 +24,17 @@ window.addEventListener('hashchange', function (event) {
         case 'skills': showSkills(); break;
         case 'portfolio': showPortfolio(); break;
         case 'blogs': showBlogs(); break;
+        default: checkHomeOrPost(); break;
     }
 });
+
+function checkHomeOrPost(){
+    var val = window.location.href;
+    let index = val.indexOf('posts');
+    if(index !== -1){
+        showBlogPost();
+    };
+}
 
 var android = [{
     name: 'UniQR',
@@ -155,4 +164,9 @@ function showBlogs() {
     portfolio.style.top = '800px';
     blogs.style.opacity = '1';
     blogs.style.top = '150px';
+}
+
+function showBlogPost(){
+    blogPost.style.opacity = 1;
+    blogPost.style.top = '150px'
 }
