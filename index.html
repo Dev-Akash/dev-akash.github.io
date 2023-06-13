@@ -19,20 +19,33 @@
 </head>
 
 <body class="site_background h-100">
-	<img style="position: absolute; z-index: -1; width: 100%; height: 100vh; object-fit: cover; object-position: center;"
+	<!-- <img style="position: absolute; z-index: -1; width: 100%; height: 100vh; object-fit: cover; object-position: center;"
 		src="https://images.pexels.com/photos/1585634/pexels-photo-1585634.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+		alt=""> -->
+	<img style="position: absolute; z-index: -1; width: 100%; height: 100vh; object-fit: cover; object-position: center;"
+		src="https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
 		alt="">
 	<nav class="d-sm-flex text-center justify-content-between p-5">
 		<strong>Dev Akash</strong>
 		<ul class="d-flex mt-3 mt-md-0" style="list-style: none; padding: 0px;">
-			<li role="button" class="me-3" onclick="showHome()">Home</li>
-			<li role="button" class="me-3" onclick="showAbout()">About</li>
-			<li role="button" class="me-3" onclick="showSkills()">Skills</li>
-			<li role="button" class="me-3" onclick="showPortfolio()">Portfolio</li>
-			<li role="button" class="me-3" onclick="showBlogs()">Blogs</li>
+			<li role="button" class="me-3">
+				<a href="#home" style="text-decoration: none; color: white;">Home</a>
+			</li>
+			<li role="button" class="me-3">
+				<a href="#about" style="text-decoration: none; color: white;">About</a>
+			</li>
+			<li role="button" class="me-3">
+				<a href="#skills" style="text-decoration: none; color: white;">Skills</a>
+			</li>
+			<li role="button" class="me-3">
+				<a href="#portfolio" style="text-decoration: none; color: white;">Portfolio</a>
+			</li>
+			<li role="button" class="me-3">
+				<a href="#blogs" style="text-decoration: none; color: white;">Blogs</a>
+			</li>
 		</ul>
 	</nav>
-	<div id="home" class="ms-5"
+	<div id="homeSection" class="ms-5"
 		style="opacity: 1;position: absolute; top: 50%; transform: translate(0,-50%); transition: opacity 1s;">
 		<div class="display-1">
 			<span class="text-start">
@@ -64,8 +77,13 @@
 			<span style="opacity: 0.8;">@Seawoods Ventures Inc.</span><br>
 			<span style="font-size: 12px; opacity: 0.5;">July 2021 - Current</span>
 			<p style="font-weight: 100;">
-				Currently working here. Providing services with skills of Angular, React, Firebase, MERN stack, UI/UX
-				designs and many more
+			<ul>
+				<li>Worked on building UI/UX Designs for multiple different projects.</li>
+				<li>Implemented Designs in React and Angular frameworks on different projects.</li>
+				<li>Implemented Feature Functionalities
+					on projects using different technology
+					stacks - MEAN, MERN and Firebase.</li>
+			</ul>
 			</p>
 		</div>
 		<div class="experienceCard mt-3 p-3 border-end text-end">
@@ -73,8 +91,10 @@
 			<span style="opacity: 0.8;">@Freelance</span><br>
 			<span style="font-size: 12px; opacity: 0.5;">Dec 2020 - Feb, 2021</span>
 			<p style="font-weight: 100;">
-				Currently working here. Providing services with skills of Angular, React, Firebase, MERN stack, UI/UX
-				designs and many more
+			<ul style="list-style-position: inside;">
+				<li>Build Quiz Platform for Android with Management app.</li>
+				<li>Integrated Features like Payment Gateway, Push Notification, Third Party Authentication.</li>
+			</ul>
 			</p>
 		</div>
 		<div class="experienceCard mt-3 p-3 border-start">
@@ -82,8 +102,10 @@
 			<span style="opacity: 0.8;">@IIT Bombay</span><br>
 			<span style="font-size: 12px; opacity: 0.5;">Jan 2020 - April, 2020</span>
 			<p style="font-weight: 100;">
-				Currently working here. Providing services with skills of Angular, React, Firebase, MERN stack, UI/UX
-				designs and many more
+			<ul>
+				<li>Create web platform for converting Human poses video to Animated Character video.</li>
+				<li>Integrated PoseNet TensorFlow model</li>
+			</ul>
 			</p>
 		</div>
 		<span class="d-block mt-3 fs-3" style="font-weight: 100;">Interests</span>
@@ -131,7 +153,7 @@
 		</div>
 	</section>
 
-	<section id="skills" class="glassCard p-3">
+	<section id="skillSection" class="glassCard p-3">
 		<span class="fs-1" style="font-weight: 100;">Skills</span>
 		<p class="mt-3" style="font-weight: 100;">This is a generic portfolio, so considering all the skills that I
 			think I'm good at.</p>
@@ -407,7 +429,7 @@
 		</div>
 	</section>
 
-	<section id="portfolio" class="glassCard p-3">
+	<section id="portfolioSection" class="glassCard p-3">
 		<span class="fs-1" style="font-weight: 100;">Portfolio</span>
 		<!-- <div class="mt-3">
 			<ul class="d-flex mx-auto align-items-center justify-content-start"
@@ -605,17 +627,21 @@
 		</div>
 	</section>
 
-	<section id="blogs" class="glassCard p-3">
+	<section id="blogsSection" class="glassCard p-3">
 		<span class="fs-1" style="font-weight: 100;">Blogs</span>
 		<div class="row">
 
 			<!-- Col 1 -->
-			<div class="col-md-3">
+			<div class="col-lg-3">
 				<div class="mt-3">
 					<div class="experienceCard p-3 border-start">
 						<span class="d-block fs-3" style="font-weight: 100;">Edge Detection in OpenCV</span>
-						<p style="font-weight: 100;">In this blog, we are going to understand that, what is edge detection and why it is used in image processing, and then we would talk about the most widely used technique of edge detection i.e., Canny Edge detection, and finally we will code Canny Edge detection using OpenCV's Canny() function.</p>
-						<a style="text-decoration: none;" href="https://dev-akash.github.io/posts/edge-detection-in-opencv.html">
+						<p style="font-weight: 100;">In this blog, we are going to understand that, what is edge
+							detection and why it is used in image processing, and then we would talk about the most
+							widely used technique of edge detection i.e., Canny Edge detection, and finally we will code
+							Canny Edge detection using OpenCV's Canny() function.</p>
+						<a style="text-decoration: none;"
+							href="https://dev-akash.github.io/posts/edge-detection-in-opencv.html">
 							<div class="d-flex align-items-center">
 								<span class="d-block">Read Blog</span>
 								<span class="d-block material-symbols-outlined">
@@ -627,9 +653,12 @@
 				</div>
 				<div class="mt-3">
 					<div class="experienceCard p-3 border-start">
-						<span class="d-block fs-3" style="font-weight: 100;">How To Add a View programmatically in Android</span>
-						<p style="font-weight: 100;">This article will make you familar with the coding in android and know how to create views and attach callback listeners to it.</p>
-						<a style="text-decoration: none;" href="https://dev-akash.github.io/posts/how-to-add-a-view-programmatically-in-android-using-java.html">
+						<span class="d-block fs-3" style="font-weight: 100;">How To Add a View programmatically in
+							Android</span>
+						<p style="font-weight: 100;">This article will make you familar with the coding in android and
+							know how to create views and attach callback listeners to it.</p>
+						<a style="text-decoration: none;"
+							href="https://dev-akash.github.io/posts/how-to-add-a-view-programmatically-in-android-using-java.html">
 							<div class="d-flex align-items-center">
 								<span class="d-block">Read Blog</span>
 								<span class="d-block material-symbols-outlined">
@@ -642,12 +671,15 @@
 			</div>
 
 			<!-- Col 2 -->
-			<div class="col-md-3">
+			<div class="col-lg-3">
 				<div class="mt-3">
 					<div class="experienceCard p-3 border-start">
-						<span class="d-block fs-3" style="font-weight: 100;">Getting Started with Videos in OpenCV</span>
-						<p style="font-weight: 100;">Hi there, and welcome again to Dev-akash's blog post, so today we will be getting started with videos in OpenCV,</p>
-						<a style="text-decoration: none;" href="https://dev-akash.github.io/posts/getting-started-with-videos-in-opencv.html">
+						<span class="d-block fs-3" style="font-weight: 100;">Getting Started with Videos in
+							OpenCV</span>
+						<p style="font-weight: 100;">Hi there, and welcome again to Dev-akash's blog post, so today we
+							will be getting started with videos in OpenCV,</p>
+						<a style="text-decoration: none;"
+							href="https://dev-akash.github.io/posts/getting-started-with-videos-in-opencv.html">
 							<div class="d-flex align-items-center">
 								<span class="d-block">Read Blog</span>
 								<span class="d-block material-symbols-outlined">
@@ -660,8 +692,11 @@
 				<div class="mt-3">
 					<div class="experienceCard p-3 border-start">
 						<span class="d-block fs-3" style="font-weight: 100;">How to listen mouse events in OpenCV</span>
-						<p style="font-weight: 100;">In this post will be haveing a illustration of an app on how the mouse events work in opencv and will provide a light on callback function and the cv2.setMouseCallback() function</p>
-						<a style="text-decoration: none;" href="https://dev-akash.github.io/posts/how-to-listen-mouse-events-in-opencv.html">
+						<p style="font-weight: 100;">In this post will be haveing a illustration of an app on how the
+							mouse events work in opencv and will provide a light on callback function and the
+							cv2.setMouseCallback() function</p>
+						<a style="text-decoration: none;"
+							href="https://dev-akash.github.io/posts/how-to-listen-mouse-events-in-opencv.html">
 							<div class="d-flex align-items-center">
 								<span class="d-block">Read Blog</span>
 								<span class="d-block material-symbols-outlined">
@@ -674,12 +709,16 @@
 			</div>
 
 			<!-- Col 3 -->
-			<div class="col-md-3">
+			<div class="col-lg-3">
 				<div class="mt-3">
 					<div class="experienceCard p-3 border-start">
-						<span class="d-block fs-3" style="font-weight: 100;">How to convert color image to grayscale in opencv with python</span>
-						<p style="font-weight: 100;">In this tutorial we are going to see how to read a image as grayscale as well as we will convert a color image into a grayscale image using opencv and python, if you do not know how to read a image in opencv</p>
-						<a style="text-decoration: none;" href="https://dev-akash.github.io/posts/how-to-convert-color-image-to-grayscale-in-opencv-with-python.html">
+						<span class="d-block fs-3" style="font-weight: 100;">How to convert color image to grayscale in
+							opencv with python</span>
+						<p style="font-weight: 100;">In this tutorial we are going to see how to read a image as
+							grayscale as well as we will convert a color image into a grayscale image using opencv and
+							python, if you do not know how to read a image in opencv</p>
+						<a style="text-decoration: none;"
+							href="https://dev-akash.github.io/posts/how-to-convert-color-image-to-grayscale-in-opencv-with-python.html">
 							<div class="d-flex align-items-center">
 								<span class="d-block">Read Blog</span>
 								<span class="d-block material-symbols-outlined">
@@ -692,8 +731,10 @@
 				<div class="mt-3">
 					<div class="experienceCard p-3 border-start">
 						<span class="d-block fs-3" style="font-weight: 100;">How to read image in OpenCV</span>
-						<p style="font-weight: 100;">Welcome! In this post I am going to describe how to read image in OpenCV</p>
-						<a style="text-decoration: none;" href="https://dev-akash.github.io/posts/how-to-read-image-in-opencv.html">
+						<p style="font-weight: 100;">Welcome! In this post I am going to describe how to read image in
+							OpenCV</p>
+						<a style="text-decoration: none;"
+							href="https://dev-akash.github.io/posts/how-to-read-image-in-opencv.html">
 							<div class="d-flex align-items-center">
 								<span class="d-block">Read Blog</span>
 								<span class="d-block material-symbols-outlined">
@@ -706,12 +747,14 @@
 			</div>
 
 			<!-- Col 4 -->
-			<div class="col-md-3">
+			<div class="col-lg-3">
 				<div class="mt-3">
 					<div class="experienceCard p-3 border-start">
 						<span class="d-block fs-3" style="font-weight: 100;">How to install OpenCV in windows</span>
-						<p style="font-weight: 100;">In this post I will be describing procedure to install an open-source Computer Vision library called OpenCV in python on windows</p>
-						<a style="text-decoration: none;" href="https://dev-akash.github.io/posts/how-to-install-opencv-python-on-windows.html">
+						<p style="font-weight: 100;">In this post I will be describing procedure to install an
+							open-source Computer Vision library called OpenCV in python on windows</p>
+						<a style="text-decoration: none;"
+							href="https://dev-akash.github.io/posts/how-to-install-opencv-python-on-windows.html">
 							<div class="d-flex align-items-center">
 								<span class="d-block">Read Blog</span>
 								<span class="d-block material-symbols-outlined">
@@ -724,8 +767,11 @@
 				<div class="mt-3">
 					<div class="experienceCard p-3 border-start">
 						<span class="d-block fs-3" style="font-weight: 100;">How to Bulk Rename Files</span>
-						<p style="font-weight: 100;">So, most of the time we encounter a situation for renaming the files in large quantity, persons who create datasets to the persons who just want to organise a folder with some conventional names. To make this hectic task more convinent</p>
-						<a style="text-decoration: none;" href="https://dev-akash.github.io/posts/how-to-bulk-rename-files.html">
+						<p style="font-weight: 100;">So, most of the time we encounter a situation for renaming the
+							files in large quantity, persons who create datasets to the persons who just want to
+							organise a folder with some conventional names. To make this hectic task more convinent</p>
+						<a style="text-decoration: none;"
+							href="https://dev-akash.github.io/posts/how-to-bulk-rename-files.html">
 							<div class="d-flex align-items-center">
 								<span class="d-block">Read Blog</span>
 								<span class="d-block material-symbols-outlined">
@@ -738,144 +784,8 @@
 			</div>
 		</div>
 	</section>
-
-	<script>
-		var home = document.getElementById('home');
-		var about = document.getElementById('aboutSection');
-		var skills = document.getElementById('skills');
-		var portfolio = document.getElementById('portfolio');
-		var blogs = document.getElementById('blogs');
-
-		var android = [{
-			name: 'UniQR',
-			description: 'No description provided',
-			url: 'https://play.google.com/store/apps/details?id=srivastava995.akash.bbc',
-		}];
-		var games = [{
-			name: 'Slippingo',
-			description: 'No description provided',
-			url: 'https://play.google.com/store/apps/details?id=com.sriakash.dev.Slippingo',
-		},
-		{
-			name: 'Hover Ball',
-			description: 'No description provided',
-			url: 'https://dev-akash.github.io/HoverBall/',
-		}];
-		var ai = [{
-			name: 'Classroom Attendance Marking System',
-			description: 'No description provided',
-			url: null,
-		},
-		{
-			name: 'Face Detection Using Supervised Machine Learning',
-			description: 'No description provided',
-			url: null,
-		},
-		{
-			name: 'MNIST Digit Recognition',
-			description: 'No description provided',
-			url: null,
-		},
-		{
-			name: 'Skin Cancer MNIST Recognition: HAM10000',
-			description: 'No description provided',
-			url: null,
-		},
-		{
-			name: 'Chest X-Ray Images (Pneumonia Detection)',
-			description: 'No description provided',
-			url: null,
-		}];
-		var web = [{
-			name: 'Tasker',
-			description: 'No description provided',
-			url: 'https://github.com/Dev-Akash/Tasker',
-		},
-		{
-			name: 'Neon Portfolio',
-			description: 'No description provided',
-			url: 'https://dev-akash.github.io/NeonPortfolio',
-		},
-		{
-			name: 'Jambread UI',
-			description: 'No description provided',
-			url: 'https://dev-akash.github.io/JamBreadUI',
-		}];
-		var robotics = [{
-			name: 'Replication of the human hand motion in Real time',
-			description: 'No description provided',
-			url: null,
-		}];
-		var software = [{
-			name: 'Bulkren',
-			description: 'No description provided',
-			url: 'https://pypi.org/project/Bulkren/',
-		},
-		{
-			name: 'Chromatica',
-			description: 'No description provided',
-			url: 'https://github.com/Dev-Akash/Chromatica',
-		}];
-		function showAbout() {
-			home.style.opacity = '0';
-			about.style.opacity = '1';
-			about.style.top = '150px';
-			skills.style.opacity = '0';
-			skills.style.top = '800px';
-			portfolio.style.opacity = '0';
-			portfolio.style.top = '800px';
-			blogs.style.opacity = '0';
-			blogs.style.top = '800px';
-		}
-
-		function showHome() {
-			home.style.opacity = '1';
-			about.style.top = '800px';
-			about.style.opacity = '0';
-			skills.style.top = '800px';
-			skills.style.opacity = '0';
-			portfolio.style.opacity = '0';
-			portfolio.style.top = '800px';
-			blogs.style.opacity = '0';
-			blogs.style.top = '800px';
-		}
-
-		function showSkills() {
-			home.style.opacity = '0';
-			about.style.opacity = '0';
-			about.style.top = '800px';
-			portfolio.style.opacity = '0';
-			portfolio.style.top = '800px';
-			blogs.style.opacity = '0';
-			blogs.style.top = '800px';
-			skills.style.opacity = '1';
-			skills.style.top = '150px';
-		}
-
-		function showPortfolio() {
-			home.style.opacity = '0';
-			about.style.opacity = '0';
-			about.style.top = '800px';
-			skills.style.opacity = '0';
-			skills.style.top = '800px';
-			blogs.style.opacity = '0';
-			blogs.style.top = '800px';
-			portfolio.style.opacity = '1';
-			portfolio.style.top = '150px';
-		}
-
-		function showBlogs() {
-			home.style.opacity = '0';
-			about.style.opacity = '0';
-			about.style.top = '800px';
-			skills.style.opacity = '0';
-			skills.style.top = '800px';
-			portfolio.style.opacity = '0';
-			portfolio.style.top = '800px';
-			blogs.style.opacity = '1';
-			blogs.style.top = '150px';
-		}
-	</script>
+	
+	<script src="script.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 		crossorigin="anonymous"></script>
