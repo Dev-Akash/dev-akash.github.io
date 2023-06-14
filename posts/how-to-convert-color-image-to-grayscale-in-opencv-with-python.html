@@ -1,356 +1,149 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta charset="UTF-8">
-	<meta name="description"
-		content="how to convert color image to grayscale in opencv with python by Akash Srivastava">
-	<meta name="keywords"
-		content="OpenCV,How To,Tutorial,Anaconda,Python,Dev akash, akash srivastava,read, read image,cv2, convert color,color image to grayscale, opencv">
-	<meta name="author" content="Akash Srivastava">
-
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-157256022-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'UA-157256022-1');
-	</script>
-	<script data-ad-client="ca-pub-8197254535741426" async
-		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8197254535741426"
-		crossorigin="anonymous"></script>
-	<title>How to convert Color image to Grayscale in OpenCV with Python - Akash Srivastava</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to convert Color image to Grayscale in OpenCV with Python - Akash Srivastava</title>
+    <meta name="description"
+        content="how to convert color image to grayscale in opencv with python by Akash Srivastava">
+    <meta name="keywords"
+        content="OpenCV,How To,Tutorial,Anaconda,Python,Dev akash, akash srivastava,read, read image,cv2, convert color,color image to grayscale, opencv">
+    <meta name="author" content="Akash Srivastava">
+    <link rel="stylesheet" type="text/css" href="../theme.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
-<body>
+<body class="site_background h-100">
+    <img style="position: absolute; z-index: -1; width: 100%; height: 100vh; object-fit: cover; object-position: center;"
+        src="https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="">
 
-	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-		<a class="navbar-brand" href="#">Dev-Akash</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
+    <nav class="d-sm-flex text-center justify-content-between p-5">
+        <strong>Dev Akash</strong>
+        <ul class="d-flex mt-3 mt-md-0" style="list-style: none; padding: 0px;">
+            <li role="button" class="me-3">
+                <a href="../index.html#home" style="text-decoration: none; color: white;">Home</a>
+            </li>
+            <li role="button" class="me-3">
+                <a href="../index.html#about" style="text-decoration: none; color: white;">About</a>
+            </li>
+            <li role="button" class="me-3">
+                <a href="../index.html#skills" style="text-decoration: none; color: white;">Skills</a>
+            </li>
+            <li role="button" class="me-3">
+                <a href="../index.html#portfolio" style="text-decoration: none; color: white;">Portfolio</a>
+            </li>
+            <li role="button" class="me-3">
+                <a href="../index.html#blogs" style="text-decoration: none; color: white;">Blogs</a>
+            </li>
+        </ul>
+    </nav>
 
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="../allposts.html">Blogs</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="../projects.html">Projects</a>
-				</li>
-			</ul>
-			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-				<button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
-			</form>
-		</div>
-	</nav>
-	<div class="d-sm-flex flex-row mt-2">
-		<div class="col-sm-3 p-2 bg-white">
-			<div id="list-example" class="list-group sticky-top">
-				<h4 class="my-3">In this article</h4>
-				<a class="list-group-item list-group-item-action" href="#list-item-1">Introduction</a>
-				<a class="list-group-item list-group-item-action" href="#list-item-2">Method 1: Using imread()
-					function</a>
-				<a class="list-group-item list-group-item-action" href="#list-item-3">Method 2: Using cvtColor()
-					function</a>
-				<a class="list-group-item list-group-item-action" href="#list-item-4">Conclusion</a>
-			</div>
-		</div>
-		<div class="col-sm-6 p-2 bg-white">
-			<div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
-				<div class="jumbotron jumbotron-fluid">
-					<div class="container">
-						<h1 class="display-4">How to convert color image to grayscale in OpenCV</h1>
-					</div>
-				</div>
+    <section id="blogPost" class="glassCard p-3">
+        <span class="fs-1" style="font-weight: 100;">How to convert color image to grayscale in OpenCV</span>
+        <p class="d-block mt-3" style="font-weight: 100;">Welcome, In this tutorial we are going to see how to read a
+            image as grayscale as well as we
+            will convert
+            a color image into a grayscale image using opencv and python, if you do not know how to read
+            a image in
+            opencv, do check out this post <a style="text-decoration: none;" href="./how-to-read-image-in-opencv.html"
+                target="_blank">here</a>.
+            <br>
+            So to convert a color image to a grayscale image in opencv, we can have two solution
+        </p>
+        <ul style="font-weight: 100;">
+            <li>Convert image to grayscale with <strong>imread()</strong> function</li>
+            <li>Convert image to grayscale using <strong>cvtColor()</strong> function</li>
+        </ul>
+        <p style="font-weight: 100;">
+            Let's discover how to do it with above mentioned functions...
+        </p>
+        <span class="d-block fs-3" style="font-weight: 100;">Method 1: Using imread() function</span>
+        <p style="font-weight: 100;"><strong>imread()</strong> function is used to read an image in OpenCV but there is
+            one
+            more parameter to be
+            considerd, that is <strong>flag</strong> which decides the way image is read. There
+            three flag defined in
+            OpenCV..
+        </p>
+        <ol style="font-weight: 100;">
+            <li>cv2.IMREAD_COLOR or 1</li>
+            <li>cv2.IMREAD_GRAYSCALE or 0</li>
+            <li>cv2.IMREAD_UNCHANGED or -1</li>
+        </ol>
+        <p style="font-weight: 100;">
+            So to convert the color image to grayscale we will be using
+            <strong>cv2.imread("image-name.png",0)</strong> or
+            you can also write <strong>cv2.IMREAD_GRAYSCALE</strong> in the place of 0 as it also
+            denotes the same
+            constant.
+        </p>
 
-				<!-- Ads Here -->
-				<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
-				<!-- first_add -->
-				<!-- <ins class="adsbygoogle"
-					 style="display:block"
-					 data-ad-client="ca-pub-8197254535741426"
-					 data-ad-slot="6773757685"
-					 data-ad-format="auto"
-					 data-full-width-responsive="true"></ins>
-				<script>
-					 (adsbygoogle = window.adsbygoogle || []).push({});
-				</script> -->
+        <span class="d-block fs-3" style="font-weight: 100;">Code</span>
+        <div class="experienceCard p-3 border-start">
+            <code>
+                import cv2<br><br>
 
-				<div class="card card-body">
-					<nav aria-label="breadcrumb">
-						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-							<li class="breadcrumb-item"><a href="../allposts.html">Blogs</a></li>
-							<li class="breadcrumb-item active" aria-current="page">How to convert color image to
-								grayscale in OpenCV</li>
-						</ol>
-					</nav>
-					<div class="flex-column">
-						<span class="badge badge-pill badge-primary p-2 mb-3">Opencv</span>
-						<span class="badge badge-pill badge-primary p-2 mb-3">Computer Vision</span>
-						<span class="badge badge-pill badge-primary p-2 mb-3">Python</span>
-					</div>
-					<h2 id="list-item-1">Introduction</h4>
-						<p>Welcome, In this tutorial we are going to see how to read a image as grayscale as well as we
-							will convert
-							a color image into a grayscale image using opencv and python, if you do not know how to read
-							a image in
-							opencv, do check out this post <a href="./how-to-read-image-in-opencv.html">here</a>.
-						</p>
-						<p>
-							So to convert a color image to a grayscale image in opencv, we can have two solution
-						<ul>
-							<li>Convert image to grayscale with <strong>imread()</strong> function</li>
-							<li>Convert image to grayscale using <strong>cvtColor()</strong> function</li>
-						</ul>
-						Let's discover how to do it with above mentioned functions...
-						</p>
+                <span style="color: green"># Reading color image as grayscale</span><br>
+                gray = cv2.imread("color-img.png",0)<br><br>
 
-						<!-- Ads Here -->
-						<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
-						<!-- first_add -->
-						<!-- <ins class="adsbygoogle"
-							 style="display:block"
-							 data-ad-client="ca-pub-8197254535741426"
-							 data-ad-slot="6773757685"
-							 data-ad-format="auto"
-							 data-full-width-responsive="true"></ins>
-						<script>
-							 (adsbygoogle = window.adsbygoogle || []).push({});
-						</script> -->
+                <span style="color: green"># Showing grayscale image</span><br>
+                cv2.imshow("Grayscale Image", gray)<br><br>
 
-						<h2 id="list-item-2">Method 1: Using imread() function</h4>
-							<p>
-								<strong>imread()</strong> function is used to read an image in OpenCV but there is one
-								more parameter to be
-								considerd, that is <strong>flag</strong> which decides the way image is read. There
-								three flag defined in
-								OpenCV..
-							<ol>
-								<li>cv2.IMREAD_COLOR or 1</li>
-								<li>cv2.IMREAD_GRAYSCALE or 0</li>
-								<li>cv2.IMREAD_UNCHANGED or -1</li>
-							</ol>
-							So to convert the color image to grayscale we will be using
-							<strong>cv2.imread("image-name.png",0)</strong> or
-							you can also write <strong>cv2.IMREAD_GRAYSCALE</strong> in the place of 0 as it also
-							denotes the same
-							constant.<br><br>
+                <span style="color: green"># waiting for key event</span><br>
+                cv2.waitKey(0)<br><br>
 
-							<div class="card text-white bg-dark mb-3">
-								<div class="card-header h5">Code</div>
-								<div class="card-body">
-									<!--h5 class="card-title">Dark card title</h5-->
-									import cv2<br><br>
+                <span style="color: green"># destroying all windows</span><br>
+                cv2.destroyAllWindows()<br>
+            </code>
+        </div>
+        <br>
+        <span class="d-block fs-3" style="font-weight: 100;">Method 2: Using cvtColor() function</span>
+        <p style="font-weight: 100;">
+            <strong>cvtColor()</strong> function in OpenCV is very helpful in converting color
+            channels from one to
+            another such as BRG to HSV or BRG to RGB. The same method can be used to convert BRG
+            to GRAY by using the
+            <strong>cv2.cvtColor(img,cv2.BGR2GRAY)</strong><br><br>
+        </p>
+        <div class="experienceCard p-3 border-start">
+            <code>
+                import cv2<br><br>
 
-									<span style="color: green"># Reading color image as grayscale</span><br>
-									gray = cv2.imread("color-img.png",0)<br><br>
+                <span style="color: green"># Reading color image</span><br>
+                img = cv2.imread("color-img.png")<br><br>
 
-									<span style="color: green"># Showing grayscale image</span><br>
-									cv2.imshow("Grayscale Image", gray)<br><br>
+                <span style="color: green"># Converting color image to grayscale
+                    image</span><br>
+                gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)<br><br>
 
-									<span style="color: green"># waiting for key event</span><br>
-									cv2.waitKey(0)<br><br>
+                <span style="color: green"># Showing the converted image</span><br>
+                cv2.imshow("Converted Image",gray)<br><br>
 
-									<span style="color: green"># destroying all windows</span><br>
-									cv2.destroyAllWindows()<br><br>
-								</div>
-							</div>
-							</p>
+                <span style="color: green"># waiting for key event</span><br>
+                cv2.waitKey(0)<br><br>
 
-							<!-- Ads Here -->
-							<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
-							<!-- first_add -->
-							<!-- <ins class="adsbygoogle"
-								 style="display:block"
-								 data-ad-client="ca-pub-8197254535741426"
-								 data-ad-slot="6773757685"
-								 data-ad-format="auto"
-								 data-full-width-responsive="true"></ins>
-							<script>
-								 (adsbygoogle = window.adsbygoogle || []).push({});
-							</script> -->
-
-							<h2 id="list-item-3">Method 2: Using cvtColor() function</h4>
-								<p>
-									<strong>cvtColor()</strong> function in OpenCV is very helpful in converting color
-									channels from one to
-									another such as BRG to HSV or BRG to RGB. The same method can be used to convert BRG
-									to GRAY by using the
-									<strong>cv2.cvtColor(img,cv2.BGR2GRAY)</strong><br><br>
-								</p>
-								<div class="card text-white bg-dark mb-3">
-									<div class="card-header h5">Code</div>
-									<div class="card-body">
-										<!--h5 class="card-title">Dark card title</h5-->
-										import cv2<br><br>
-
-										<span style="color: green"># Reading color image</span><br>
-										img = cv2.imread("color-img.png")<br><br>
-
-										<span style="color: green"># Converting color image to grayscale
-											image</span><br>
-										gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)<br><br>
-
-										<span style="color: green"># Showing the converted image</span><br>
-										cv2.imshow("Converted Image",gray)<br><br>
-
-										<span style="color: green"># waiting for key event</span><br>
-										cv2.waitKey(0)<br><br>
-
-										<span style="color: green"># destroying all windows</span><br>
-										cv2.destroyAllWindows()<br><br>
-									</div>
-								</div>
-								<br>
-								<h4>Output</h4>
-								<img class="image" src="../images/grayscale-conversion.PNG" alt="Output-image"><br>
-
-								<h2 id="list-item-4">Conclusion</h4>
-									<p>
-										In this post we came to know two ways in which we can convert a color image to a
-										grayscale image and came
-										across the function like <strong>cvtColor()</strong> and <strong>imread()
-											flags</strong> used in opencv to
-										perform that conversion. If you want to read more articles related to OpenCV <a
-											href="../allposts.html">click here</a>
-									</p>
-									<div class="dropdown-divider my-4"></div>
-									<div class="col-sm-6">
-										<div class="card">
-											<div class="card-header">
-												Contributed By
-											</div>
-											<div class="card-body">
-												<h5 class="card-title">Dev-Akash</h5>
-												<p class="card-text">A Computer Vision Enthusiast</p>
-												<a href="https://github.com/dev-akash" class="btn btn-primary">View
-													Profile</a>
-											</div>
-										</div>
-									</div>
-									<a class="btn btn-outline-primary rounded mt-5 col-sm-2 mx-auto" href="#">Back To
-										Top</a>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-3 p-2 bg-white">
-			<h4 class="my-3">Recommended</h4>
-			<div class="card text-white bg-dark mb-3">
-				<div class="card-header">Blog</div>
-				<div class="card-body">
-					<h5 class="card-title">How to install opencv on windows</h5>
-					<p class="card-text">Welcome! In this post I am going to describ how to install OpenCV, an
-						open-source library for computer vision in python on Windows</p>
-					<a class="btn btn-primary" href="./how-to-install-opencv-python-on-windows.html">Read More</a>
-				</div>
-			</div>
-			<div class="card text-white bg-dark mb-3">
-				<div class="card-header">Blog</div>
-				<div class="card-body">
-					<h5 class="card-title">How to listen mouse events in OpenCV</h5>
-					<p class="card-text">So in this tutorial we will create a small application which will draw the path
-						followed by the mouse pointer on the canvas.</p>
-					<a class="btn btn-primary" href="./how-to-listen-mouse-events-in-opencv.html">Read More</a>
-				</div>
-			</div>
-			<!-- Amazon ads -->
-			<script type="text/javascript" language="javascript">
-				var aax_size = '300x250';
-				var aax_pubname = 'devakashweb0f-21';
-				var aax_src = '302';
-			</script>
-			<script type="text/javascript" language="javascript"
-				src="https://c.amazon-adsystem.com/aax2/assoc.js"></script>
-
-			<!-- Amazon ads -->
-			<script type="text/javascript" language="javascript">
-				var aax_size = '300x250';
-				var aax_pubname = 'devakashweb0f-21';
-				var aax_src = '302';
-			</script>
-			<script type="text/javascript" language="javascript"
-				src="https://c.amazon-adsystem.com/aax2/assoc.js"></script>
-
-			<!-- Amazon ads -->
-			<script type="text/javascript" language="javascript">
-				var aax_size = '300x250';
-				var aax_pubname = 'devakashweb0f-21';
-				var aax_src = '302';
-			</script>
-			<script type="text/javascript" language="javascript"
-				src="https://c.amazon-adsystem.com/aax2/assoc.js"></script>
-			<!-- Ads Here -->
-			<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
-			<!-- first_add -->
-			<!-- <ins class="adsbygoogle"
-								 style="display:block"
-								 data-ad-client="ca-pub-8197254535741426"
-								 data-ad-slot="6773757685"
-								 data-ad-format="auto"
-								 data-full-width-responsive="true"></ins>
-							<script>
-								 (adsbygoogle = window.adsbygoogle || []).push({});
-							</script> -->
-		</div>
-	</div>
-	<div class="dropdown-divider my-4"></div>
-	<div class="container">
-		<div class="d-sm-flex flex-row my-3">
-			<div class="col-sm-4 text-center flex-col">
-				<div class="h3">Dev-Akash</div>
-				<div> &copy; 2019-21</div>
-			</div>
-			<div class="col-sm-4 text-center flex-column">
-				<div class="h4">References</div>
-				<div>
-					<a href="../allposts.html">Blogs</a>
-				</div>
-				<div>
-					<a href="../projects.html">Projects</a>
-				</div>
-			</div>
-			<div class="col-sm-4 text-center flex-column">
-				<div class="h4">About</div>
-				<div>
-					<a href="mail:sriakash.dev@gmail.com">Contact</a>
-				</div>
-				<div>
-					<a href="../privacy_policy.html">Privacy</a>
-				</div>
-				<div>
-					<a href="../terms-and-conditions.html">Terms</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-		crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-		crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-		crossorigin="anonymous"></script>
+                <span style="color: green"># destroying all windows</span><br>
+                cv2.destroyAllWindows()<br>
+            </code>
+        </div>
+        <br>
+        <span class="d-block fs-3" style="font-weight: 100;">Output</span>
+        <img width="100%" class="image" src="../images/grayscale-conversion.PNG" alt="Output-image"><br><br>
+        <span class="d-block fs-3" style="font-weight: 100;">Conclusion</span>
+        <p style="font-weight: 100;">
+            In this post we came to know two ways in which we can convert a color image to a
+            grayscale image and came
+            across the function like <strong>cvtColor()</strong> and <strong>imread()
+                flags</strong> used in opencv to
+            perform that conversion. If you want to read more articles related to OpenCV <a
+                href="../index.html#blogs" style="text-decoration: none;">click here</a>
+        </p>
+        <script src="../script.js"></script>
 </body>
 
 </html>
