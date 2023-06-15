@@ -38,19 +38,19 @@
         <strong>Dev Akash</strong>
         <ul class="d-flex mt-3 mt-md-0" style="list-style: none; padding: 0px;">
             <li role="button" class="me-3">
-                <a href="../index.html#home" style="text-decoration: none; color: white;">Home</a>
+                <a href="./index.html#home" style="text-decoration: none; color: white;">Home</a>
             </li>
             <li role="button" class="me-3">
-                <a href="../index.html#about" style="text-decoration: none; color: white;">About</a>
+                <a href="./index.html#about" style="text-decoration: none; color: white;">About</a>
             </li>
             <li role="button" class="me-3">
-                <a href="../index.html#skills" style="text-decoration: none; color: white;">Skills</a>
+                <a href="./index.html#skills" style="text-decoration: none; color: white;">Skills</a>
             </li>
             <li role="button" class="me-3">
-                <a href="../index.html#portfolio" style="text-decoration: none; color: white;">Portfolio</a>
+                <a href="./index.html#portfolio" style="text-decoration: none; color: white;">Portfolio</a>
             </li>
             <li role="button" class="me-3">
-                <a href="../index.html#blogs" style="text-decoration: none; color: white;">Blogs</a>
+                <a href="./index.html#blogs" style="text-decoration: none; color: white;">Blogs</a>
             </li>
         </ul>
     </nav>
@@ -94,7 +94,7 @@
         <p>Note that Dev-Akash has no access to or control over these cookies that are used by third-party advertisers.
         </p>
 
-        <span class="d-block fs-3" style="font-weight: 100;">Third Party Privacy Policies</span>  
+        <span class="d-block fs-3" style="font-weight: 100;">Third Party Privacy Policies</span>
         <p>Dev-Akash's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to
             consult the respective Privacy Policies of these third-party ad servers for more detailed information. It
             may include their practices and instructions about how to opt-out of certain options. </p>
@@ -102,8 +102,8 @@
         <p>You can choose to disable cookies through your individual browser options. To know more detailed information
             about cookie management with specific web browsers, it can be found at the browsers' respective websites.
             What Are Cookies?</p>
-        
-        <span class="d-block fs-3" style="font-weight: 100;">Children's Information</span>  
+
+        <span class="d-block fs-3" style="font-weight: 100;">Children's Information</span>
         <p>Another part of our priority is adding protection for children while using the internet. We encourage parents
             and guardians to observe, participate in, and/or monitor and guide their online activity.</p>
 
@@ -112,7 +112,7 @@
             contact us immediately and we will do our best efforts to promptly remove such information from our records.
         </p>
 
-        <span class="d-block fs-3" style="font-weight: 100;">Online Privacy Policy Only</span> 
+        <span class="d-block fs-3" style="font-weight: 100;">Online Privacy Policy Only</span>
         <p>This Privacy Policy applies only to our online activities and is valid for visitors to our website with
             regards to the information that they shared and/or collect in Dev-Akash. This policy is not applicable to
             any information collected offline or via channels other than this website.</p>
@@ -120,14 +120,30 @@
         <h4>Consent</h4>
 
         <p>By using our website, you hereby consent to our Privacy Policy and agree to its Terms and Conditions.</p>
-        <script>
-            var policy = document.getElementById('policySection')
-            function showPolicy() {
-                policy.style.opacity = 1;
-                policy.style.top = '150px'
-            }
-        </script>
-        <script src="./script.js"></script>
+    </section>
+
+    <footer id="footer">
+		<span id="infoButton"  class="d-block position-absolute translate-middle top-50 start-50 material-symbols-outlined">
+			info
+		</span>
+		<div id="infoContent" class="d-flex w-100 justify-content-around align-items-center position-absolute top-50 start-50 translate-middle">
+			<div role="button">
+				<a style="color: white;" href="./privacy_policy.html">Privacy Policy</a>
+			</div>
+			<div role="button">
+				<a style="color: white;" href="./terms-and-conditions.html">Terms and conditions</a>
+			</div>
+		</div>
+	</footer>
+
+    <script>
+        var policy = document.getElementById('policySection')
+        function showPolicy() {
+            policy.style.opacity = 1;
+            policy.style.top = '150px'
+        }
+    </script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

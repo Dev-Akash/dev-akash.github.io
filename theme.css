@@ -29,6 +29,46 @@ a {
   text-decoration: none !important;
 }
 
+footer {
+  width: 50px; /* intial 50 */
+  height: 50px; 
+  position: absolute; 
+  background-color: #000;
+  bottom: 0;
+  right: 0; 
+  text-align: center;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-radius: 5px 0px 0px 0px;
+  transition: width 1s;
+}
+#infoContent{
+  display: none !important;
+  opacity: 0;
+  transition: opacity 1s;
+  white-space: nowrap;
+}
+
+#infoButton{
+  opacity: 1;
+  display: block !important;
+  transition: opacity 1s;
+}
+
+footer:hover {
+  width: 400px;
+
+  #infoContent{
+    opacity: 1;
+    display: flex !important;
+  }
+
+  #infoButton{
+    display: none !important;
+    opacity: 0;
+  }
+}
+
 .glassCard {
   opacity: 0;
   width: 80%; 
