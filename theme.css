@@ -25,6 +25,10 @@
   font-family: 'Roboto';
 }
 
+a {
+  text-decoration: none !important;
+}
+
 .glassCard {
   opacity: 0;
   width: 80%; 
