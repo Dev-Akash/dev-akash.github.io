@@ -1,20 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How To add a view programmatically in Andriod - Akash Srivastava</title>
     <meta name="description"
         content="how to convert color image to grayscale in opencv with python by Akash Srivastava">
     <meta name="keywords"
         content="OpenCV,How To,Tutorial,Anaconda,Python,Dev akash, akash srivastava,read, read image,cv2, convert color,color image to grayscale, opencv">
     <meta name="author" content="Akash Srivastava">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="../theme.css">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Material Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157256022-1"></script>
@@ -25,352 +30,174 @@
 
         gtag('config', 'UA-157256022-1');
     </script>
-    <script data-ad-client="ca-pub-8197254535741426" async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8197254535741426"
-        crossorigin="anonymous"></script>
-    <title>How To add a view programmatically in Andriod - Akash Srivastava</title>
 </head>
 
-<body>
+<body class="site_background h-100">
+    <img style="position: absolute; z-index: -1; width: 100%; height: 100vh; object-fit: cover; object-position: center;"
+        src="https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">Dev-Akash</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="../allposts.html">Blogs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../projects.html">Projects</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
+    <nav class="d-sm-flex text-center justify-content-between p-5">
+        <strong>Dev Akash</strong>
+        <ul class="d-flex mt-3 mt-md-0" style="list-style: none; padding: 0px;">
+            <li role="button" class="me-3">
+                <a href="../index.html#home" style="text-decoration: none; color: white;">Home</a>
+            </li>
+            <li role="button" class="me-3">
+                <a href="../index.html#about" style="text-decoration: none; color: white;">About</a>
+            </li>
+            <li role="button" class="me-3">
+                <a href="../index.html#skills" style="text-decoration: none; color: white;">Skills</a>
+            </li>
+            <li role="button" class="me-3">
+                <a href="../index.html#portfolio" style="text-decoration: none; color: white;">Portfolio</a>
+            </li>
+            <li role="button" class="me-3">
+                <a href="../index.html#blogs" style="text-decoration: none; color: white;">Blogs</a>
+            </li>
+        </ul>
     </nav>
-    <div class="d-sm-flex flex-row mt-2">
-        <div class="col-sm-3 p-2 bg-white">
-            <div id="list-example" class="list-group sticky-top">
-                <h4 class="my-3">In this article</h4>
-                <a class="list-group-item list-group-item-action" href="#list-item-1">Introduction</a>
-                <a class="list-group-item list-group-item-action" href="#list-item-2">Basic Todo App Setup</a>
-                <a class="list-group-item list-group-item-action" href="#list-item-3">Adding Layout Programmatically</a>
-                <a class="list-group-item list-group-item-action" href="#list-item-4">Conclusion</a>
+
+    <section id="blogPost" class="glassCard p-3">
+        <span class="fs-1" style="font-weight: 100;">How To Add A View Programmatically In Andriod</span>
+        <p class="d-block mt-3" style="font-weight: 100;">Many times we come accross a problem in Android, where we need
+            to create a feature of adding a view when a button is pressed, for instance, adding a new EditText view when
+            a add button in a todo list application.</p>
+        <p style="font-weight: 100;">
+            So, today we will go through how to create this feature in an android application. I hope before reading
+            this article, you are familar with the coding in android and know how to create views and attach callback
+            listeners to it.
+        </p>
+
+        <span class="d-block fs-3" style="font-weight: 100;">Basic Todo App Setup</span>
+        <p style="font-weight: 100;">
+            First create a <b>New Project</b> in android and let's write a basic layout for a todo
+            list having a
+            TextView, LinearLayout and a Button to add more EditText to the todo list.<br>
+            <br>
+            In this tutorial we will first go through with the code and then explain it
+            step-by-step.
+            <br><br>
+            So here is the Layout of the a generic Todo-List
+            <script src="https://gist.github.com/Dev-Akash/5db907aa323a1808df346b58f9615114.js"></script>
+            <br>
+            The above Layout code will result as below.
+            <br><br>
+            <img src="../images//how-to-add-a-view-programmatically-in-android-using-java-01.jpeg" alt="layout_image"
+                width="250" class="card-shadow">
+            <br>
+        </p>
+
+        <span class="d-block fs-3" style="font-weight: 100;">Layout Code Explaination</span>
+        <p style="font-weight: 100;">So the code in the layout is a simple layout having a root view of Linear Layout
+            having a
+            vertical
+            orientation and three elements in it:
+        <ol style="font-weight: 100;">
+            <li>Text View (Lines 10-18)</li>
+            <li>Linear Layout (Lines 19-25)</li>
+            <li>Button (Lines 26-31)</li>
+        </ol>
+        </p>
+        <p style="font-weight: 100;">
+            Here, the Text View is holding a simple text as "Todo List" and after that, the Empty Linear
+            Layout having id of <strong>container</strong>, this linear layout is the place where we
+            have to insert the EditText View
+            programmatically, for now let it be empty. And then finally we have our "Add Task" Button to
+            add the EditText in the empty Linear Layout.
+        </p>
+
+        <span class="d-block fs-3" style="font-weight: 100;">Adding Layout Programmatically</span>
+        <p style="font-weight: 100;">
+            So now after creating layout, let's start coding the logic for adding the view
+            (EditText and delet button) to
+            the layout programmatically. Let's first look out the code and then we will break it
+            down and understand it.
+            <br><br>
+            Here is the Code for java file.
+            <script src="https://gist.github.com/Dev-Akash/61a1958a34ce465ba65e82d0b631c956.js"></script>
+            <br>
+            Here is the result:<br>
+            <br>
+            <video width="250px" controls autoplay class="card-shadow">
+                <source src="../images/how-to-add-a-view-programmatically-in-android-using-java-02.mp4"
+                    type="video/mp4">
+            </video>
+        </p>
+
+        <span class="d-block fs-3" style="font-weight: 100;">Understanding the Code</span>
+        <p style="font-weight: 100;">
+            So in the code, in onCreate method, we firstly fetch the "Container" Linear layout
+            and Add Task Button from
+            the Layout file by using <code>findViewById()</code> function in lines 18-19.
+            <br><br>
+            Then in line 23, we attach a <code>onClickListener()</code> to the Add Task Button
+            so that when the Add Task
+            button is clicked the View gets populated after creating the View which we want to
+            add in the "container"
+            LinearLayout <br><br>
+
+            Then in lines 29-34, we create a LinearLayout having with of "match parent" and
+            height of "wrap content",
+            also having margin of "10dp" using a helper method named "dpTopx()" in lines 74-76,
+            and vertical
+            orientation.<br><br>
+
+            Similarly, in lines 37-41, we create a EditText View having width of zero (because
+            we will add weight to
+            it), height as "wrap content", we will add weight = 1 to it and also a placehoder
+            text using
+            <code>setHint()</code>method as "Type new Task".<br><br>
+
+            Also, in lines 44-47, we create a ImageView for holding a close sign acting as a
+            button to delete the view
+            when clicked. This view will have weight of 0.15 and have backroung set from
+            resource
+            <code>R.drawable.close_white_24dp</code> in ImageView.<br><br>
+
+            Then, in lines 50 and 51 we add the EditText View and ImageView to the previously
+            created
+            LinearLayout.<br><br>
+
+            Then, in line 54, we add the whole LinearLayout to the previously fetch "container"
+            LinearLayout from the
+            Layout file.<br><br>
+
+            And then, we also add a <code>onClickListener()</code> to the ImageView in lines
+            57-66, so that when it is
+            clicked, we delete the whole layout we created.<br><br>
+
+            And finally, at Line 71, we just virtually tap the "Add Task" button to create the
+            layout and populate it in
+            "container" LinearLayout as soon as the application is opened, so that, it seems
+            that a single View is
+            default to present on screen.
+        </p>
+        <span class="d-block fs-3" style="font-weight: 100;">Conclusion</span>
+        <p style="font-weight: 100;">
+            I hope you have now understood how to dynamically add a View in layout and also
+            remove it effeciently in alayout. A big thanks if you joind till here and
+            enjoyed the read. Also look at all blog posts <a style="text-decoration: none;"
+                href="../index.html#blogs">here</a>. <br><br>Thank you!
+        </p>
+    </section>
+    <footer id="footer">
+        <span id="infoButton"
+            class="d-block position-absolute translate-middle top-50 start-50 material-symbols-outlined">
+            info
+        </span>
+        <div id="infoContent"
+            class="d-flex w-100 justify-content-around align-items-center position-absolute top-50 start-50 translate-middle">
+            <div role="button">
+                <a style="color: white;" href="../privacy_policy.html">Privacy Policy</a>
+            </div>
+            <div role="button">
+                <a style="color: white;" href="../terms-and-conditions.html">Terms and conditions</a>
             </div>
         </div>
-        <div class="col-sm-6 p-2 bg-white">
-            <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
-                <div class="jumbotron jumbotron-fluid">
-                    <div class="container">
-                        <h1 class="display-4">How To Add A View Programmatically In Andriod</h1>
-                    </div>
-                </div>
+    </footer>
 
-                <!-- Ads Here -->
-                <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
-                <!-- first_add -->
-                <!-- <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-8197254535741426"
-                     data-ad-slot="6773757685"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script> -->
-
-                <div class="card card-body">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
-                            <li class="breadcrumb-item"><a href="../allposts.html">Blogs</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">How To Add A View Programmatically In
-                                Andriod</li>
-                        </ol>
-                    </nav>
-                    <div class="flex-column">
-                        <span class="badge badge-pill badge-primary p-2 mb-3">Views</span>
-                        <span class="badge badge-pill badge-primary p-2 mb-3">Android</span>
-                        <span class="badge badge-pill badge-primary p-2 mb-3">Java</span>
-                    </div>
-                    <h2 id="list-item-1">Introduction</h4>
-                        <p>
-                            Many times we come accross a problem in Android, where we need to create a feature of adding
-                            a view when a button is pressed, for instance, adding a new EditText view when a add button
-                            in a todo list application.
-                            <br><br>
-                            So, today we will go through how to create this feature in an android application. I hope
-                            before reading this article, you are familar with the coding in android and know how to
-                            create views and attach callback listeners to it.
-                        </p>
-
-                        <!-- Ads Here -->
-                        <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
-                        <!-- first_add -->
-                        <!-- <ins class="adsbygoogle"
-                            style="display:block"
-                            data-ad-client="ca-pub-8197254535741426"
-                            data-ad-slot="6773757685"
-                            data-ad-format="auto"
-                            data-full-width-responsive="true"></ins>
-                        <script>
-                            (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script> -->
-
-                        <h2 id="list-item-2">Basic Todo App Setup</h4>
-                            <p>
-                                First create a <b>New Project</b> in android and let's write a basic layout for a todo
-                                list having a
-                                TextView, LinearLayout and a Button to add more EditText to the todo list.<br>
-                                <br>
-                                In this tutorial we will first go through with the code and then explain it
-                                step-by-step.
-                                <br><br>
-                                So here is the Layout of the a generic Todo-List
-                                <script
-                                    src="https://gist.github.com/Dev-Akash/5db907aa323a1808df346b58f9615114.js"></script>
-                                <br>
-                                The above Layout code will result as below.
-                                <br><br>
-                                <img src="../images//how-to-add-a-view-programmatically-in-android-using-java-01.jpeg"
-                                    alt="layout_image" width="250" class="card-shadow">
-                                <br>
-                            <h5>Layout Code Explaination</h5>
-                            <p>So the code in the layout is a simple layout having a root view of Linear Layout having a
-                                vertical
-                                orientation and three elements in it:
-                            <ol>
-                                <li>Text View (Lines 10-18)</li>
-                                <li>Linear Layout (Lines 19-25)</li>
-                                <li>Button (Lines 26-31)</li>
-                            </ol>
-                            Here, the Text View is holding a simple text as "Todo List" and after that, the Empty Linear
-                            Layout having id of <strong>container</strong>, this linear layout is the place where we
-                            have to insert the EditText View
-                            programmatically, for now let it be empty. And then finally we have our "Add Task" Button to
-                            add the EditText in the empty Linear Layout.
-                            </p>
-
-                            <!-- Ads Here -->
-                            <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
-                            <!-- first_add -->
-                            <!-- <ins class="adsbygoogle"
-                                style="display:block"
-                                data-ad-client="ca-pub-8197254535741426"
-                                data-ad-slot="6773757685"
-                                data-ad-format="auto"
-                                data-full-width-responsive="true"></ins>
-                            <script>
-                                (adsbygoogle = window.adsbygoogle || []).push({});
-                            </script> -->
-
-                            <h2 id="list-item-3">Adding Layout Programmatically</h4>
-                                <p>
-                                    So now after creating layout, let's start coding the logic for adding the view
-                                    (EditText and delet button) to
-                                    the layout programmatically. Let's first look out the code and then we will break it
-                                    down and understand it.
-                                    <br><br>
-                                    Here is the Code for java file.
-                                    <script
-                                        src="https://gist.github.com/Dev-Akash/61a1958a34ce465ba65e82d0b631c956.js"></script>
-                                    <br>
-                                    Here is the result:<br>
-                                    <br>
-                                    <video width="250" controls autoplay class="card-shadow">
-                                        <source
-                                            src="../images/how-to-add-a-view-programmatically-in-android-using-java-02.mp4"
-                                            type="video/mp4">
-                                    </video>
-                                </p>
-                                <h4>Understanding the Code</h4>
-                                <p>
-                                    So in the code, in onCreate method, we firstly fetch the "Container" Linear layout
-                                    and Add Task Button from
-                                    the Layout file by using <code>findViewById()</code> function in lines 18-19.
-                                    <br><br>
-                                    Then in line 23, we attach a <code>onClickListener()</code> to the Add Task Button
-                                    so that when the Add Task
-                                    button is clicked the View gets populated after creating the View which we want to
-                                    add in the "container"
-                                    LinearLayout <br><br>
-
-                                    Then in lines 29-34, we create a LinearLayout having with of "match parent" and
-                                    height of "wrap content",
-                                    also having margin of "10dp" using a helper method named "dpTopx()" in lines 74-76,
-                                    and vertical
-                                    orientation.<br><br>
-
-                                    Similarly, in lines 37-41, we create a EditText View having width of zero (because
-                                    we will add weight to
-                                    it), height as "wrap content", we will add weight = 1 to it and also a placehoder
-                                    text using
-                                    <code>setHint()</code>method as "Type new Task".<br><br>
-
-                                    Also, in lines 44-47, we create a ImageView for holding a close sign acting as a
-                                    button to delete the view
-                                    when clicked. This view will have weight of 0.15 and have backroung set from
-                                    resource
-                                    <code>R.drawable.close_white_24dp</code> in ImageView.<br><br>
-
-                                    Then, in lines 50 and 51 we add the EditText View and ImageView to the previously
-                                    created
-                                    LinearLayout.<br><br>
-
-                                    Then, in line 54, we add the whole LinearLayout to the previously fetch "container"
-                                    LinearLayout from the
-                                    Layout file.<br><br>
-
-                                    And then, we also add a <code>onClickListener()</code> to the ImageView in lines
-                                    57-66, so that when it is
-                                    clicked, we delete the whole layout we created.<br><br>
-
-                                    And finally, at Line 71, we just virtually tap the "Add Task" button to create the
-                                    layout and populate it in
-                                    "container" LinearLayout as soon as the application is opened, so that, it seems
-                                    that a single View is
-                                    default to present on screen.
-                                </p>
-
-                                <!-- Ads Here -->
-                                <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
-                                <!-- first_add -->
-                                <!-- <ins class="adsbygoogle"
-                                    style="display:block"
-                                    data-ad-client="ca-pub-8197254535741426"
-                                    data-ad-slot="6773757685"
-                                    data-ad-format="auto"
-                                    data-full-width-responsive="true"></ins>
-                                <script>
-                                    (adsbygoogle = window.adsbygoogle || []).push({});
-                                </script> -->
-
-                                <h2 id="list-item-4">Conclusion</h4>
-                                    <p>
-                                        I hope you have now understood how to dynamically add a View in layout and also
-                                        remove it effeciently in alayout. A big thanks if you joind till here and
-                                        enjoyed the read. Also look at all blog posts <a href="../allposts.html"
-                                            target="_blank">here</a>. <br><br>Thank you!
-                                    </p>
-                                    <div class="dropdown-divider my-4"></div>
-                                    <div class="col-sm-6">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                Contributed By
-                                            </div>
-                                            <div class="card-body">
-                                                <h5 class="card-title">Dev-Akash</h5>
-                                                <p class="card-text">A Computer Vision Enthusiast</p>
-                                                <a href="https://github.com/dev-akash" class="btn btn-primary">View
-                                                    Profile</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <a class="btn btn-outline-primary rounded mt-5 col-sm-2 mx-auto" href="#">Back To
-                                        Top</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-3 p-2 bg-white">
-            <h4 class="my-3">Recommended</h4>
-            <div class="card text-white bg-dark mb-3">
-                <div class="card-header">Blog</div>
-                <div class="card-body">
-                    <h5 class="card-title">How to install opencv on windows</h5>
-                    <p class="card-text">Welcome! In this post I am going to describ how to install OpenCV, an
-                        open-source library for computer vision in python on Windows</p>
-                    <a class="btn btn-primary" href="./how-to-install-opencv-python-on-windows.html">Read More</a>
-                </div>
-            </div>
-            <div class="card text-white bg-dark mb-3">
-                <div class="card-header">Blog</div>
-                <div class="card-body">
-                    <h5 class="card-title">How to listen mouse events in OpenCV</h5>
-                    <p class="card-text">So in this tutorial we will create a small application which will draw the path
-                        followed by the mouse pointer on the canvas.</p>
-                    <a class="btn btn-primary" href="./how-to-listen-mouse-events-in-opencv.html">Read More</a>
-                </div>
-            </div>
-            <!-- Amazon ads -->
-            <script type="text/javascript" language="javascript">
-                var aax_size = '300x250';
-                var aax_pubname = 'devakashweb0f-21';
-                var aax_src = '302';
-            </script>
-            <script type="text/javascript" language="javascript"
-                src="https://c.amazon-adsystem.com/aax2/assoc.js"></script>
-
-            <!-- Amazon ads -->
-            <script type="text/javascript" language="javascript">
-                var aax_size = '300x250';
-                var aax_pubname = 'devakashweb0f-21';
-                var aax_src = '302';
-            </script>
-            <script type="text/javascript" language="javascript"
-                src="https://c.amazon-adsystem.com/aax2/assoc.js"></script>
-
-            <!-- Amazon ads -->
-            <script type="text/javascript" language="javascript">
-                var aax_size = '300x250';
-                var aax_pubname = 'devakashweb0f-21';
-                var aax_src = '302';
-            </script>
-            <script type="text/javascript" language="javascript"
-                src="https://c.amazon-adsystem.com/aax2/assoc.js"></script>
-        </div>
-    </div>
-    <div class="dropdown-divider my-4"></div>
-    <div class="container">
-        <div class="d-sm-flex flex-row my-3">
-            <div class="col-sm-4 text-center flex-col">
-                <div class="h3">Dev-Akash</div>
-                <div>&copy; 2019-21</div>
-            </div>
-            <div class="col-sm-4 text-center flex-column">
-                <div class="h4">References</div>
-                <div>
-                    <a href="../allposts.html">Blogs</a>
-                </div>
-                <div>
-                    <a href="../projects.html">Projects</a>
-                </div>
-            </div>
-            <div class="col-sm-4 text-center flex-column">
-                <div class="h4">About</div>
-                <div>
-                    <a href="mail:sriakash.dev@gmail.com">Contact</a>
-                </div>
-                <div>
-                    <a href="../privacy_policy.html">Privacy</a>
-                </div>
-                <div>
-                    <a href="../terms-and-conditions.html">Terms</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
 </body>
 
 </html>
