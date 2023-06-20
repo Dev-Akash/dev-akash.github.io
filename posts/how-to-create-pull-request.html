@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to create pull request - Akash Srivastava</title>
+    <meta name="description"
+        content="In this blog, we are going to understand how to contribute to other projects and create pull request for the same. Throughout the process we will know how to create branch, clone the project, push the latest changes and more.">
+    <meta name="keywords"
+        content="dev-akash, developer, git, github, how to, bitbucket, beginner guide, pull request, fork, branches, branch, merge, code, programming, version control">
+    <meta name="author" content="Akash Srivastava">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="../theme.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Material Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157256022-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-157256022-1');
+    </script>
+</head>
+
+<body class="site_background h-100">
+    <img style="position: absolute; z-index: -1; width: 100%; height: 100vh; object-fit: cover; object-position: center;"
+        src="https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="">
+
+    <nav class="d-sm-flex text-center justify-content-between p-5">
+        <strong>Dev Akash</strong>
+        <ul class="d-flex mt-3 mt-md-0" style="list-style: none; padding: 0px;">
+            <li role="button" class="me-3">
+                <a href="../index.html#home" style="text-decoration: none; color: white;">Home</a>
+            </li>
+            <li role="button" class="me-3">
+                <a href="../index.html#about" style="text-decoration: none; color: white;">About</a>
+            </li>
+            <li role="button" class="me-3">
+                <a href="../index.html#skills" style="text-decoration: none; color: white;">Skills</a>
+            </li>
+            <li role="button" class="me-3">
+                <a href="../index.html#portfolio" style="text-decoration: none; color: white;">Portfolio</a>
+            </li>
+            <li role="button" class="me-3">
+                <a href="../index.html#blogs" style="text-decoration: none; color: white;">Blogs</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="blogPost" class="glassCard p-3">
+        <span class="fs-1" style="font-weight: 100;">How to create pull request</span>
+        <p class="d-block mt-3" style="font-weight: 100;">
+            In this post we will look how to create a pull request to an existing project to introduce some changes required in the project. <br>
+            So in order to create a pull request one must have to go through the process listed below:
+            <ul style="font-weight: 100;">
+                <li>Fork the existing project</li>
+                <li>Create a separate branch</li>
+                <li>Introduce the required changes</li>
+                <li>Finally, create a pull Request</li>
+            </ul>
+        </p>
+        <p style="font-weight: 100;">So let's get started.</p>
+        
+        <span class="fs-3" style="font-weight: 100;">Fork the project</span>
+        <p style="font-weight: 100;">
+            In order to add changes to the project one must the local copy of the project. In most cases when creating pull request for the project which you do not already own, one must first fork the project.
+        </p>
+        <p style="font-weight: 100;">
+            Forking a project means to create a independent copy of the project, just like creating a new repository which belongs to you under your account. This basically avoids to directly pushing changes to the original project, which may also require you the permission to directly push to the repository which you do not own or maintain.
+        </p>
+        <p style="font-weight: 100;">
+            To fork the project:
+            <ul style="font-weight: 100;">
+                <li>Navigate to the original project on Github</li>
+                <li>Click on the fork button on top right of the repository</li>
+            </ul>
+        </p>
+        <p style="font-weight: 100;">
+            This will create the repository with same name under your Github account. <br>
+            Additionally, clone the repository under your account to your system using the following command, but before that click on the clone option in repository, and copy the URL. <br>
+            Execute the following command in terminal.
+
+            <div class="experienceCard p-3 border-start">
+                <code>
+                    git clone PROJECT_URL.git
+                </code>
+            </div>
+        </p>
+
+        <span class="fs-3" style="font-weight: 100;">Create separate branch</span>
+        <p style="font-weight: 100;">
+            So, in-order to introduce changes, one must create a separate branch and then start editing the project or files under it. <br>
+            To create a separate branch, open the terminal in the cloned project repository/folder and execute the following command replacing the name of branch as per your choice.
+
+            <div class="experienceCard p-3 border-start">
+                <code>
+                    git checkout -b YOUR_BRANCH_NAME
+                </code>
+            </div>
+        </p>
+
+        <span class="fs-3" style="font-weight: 100;">Introducing required changes</span>
+        <p style="font-weight: 100;">
+            Now it's time to implement required changes in the project. Just go ahead and do whatever changes you want. <br>
+            Once the changes are done, one needs to commit those changes to the branch using the following command below.
+            <div class="experienceCard p-3 border-start">
+                <code>
+                    git commit -a -m "Message for your commit (description of changes)"
+                </code>
+            </div>
+        </p>
+        <p style="font-weight: 100;">
+            After committing the changes push these changes to the branch using the command below.
+            <div class="experienceCard p-3 border-start">
+                <code>
+                    git push origin YOUR_BRANCH_NAME
+                </code>
+            </div>
+        </p>
+
+        <span class="fs-3" style="font-weight: 100;">Finally, creating a Pull request</span>
+        <p style="font-weight: 100;">
+            So, once you are done with the changes and committing and pushing them to the repository, now its time to create a pull request to the original repository of project, so that owner or maintainers of the project can review your changes and take decision whether or not to merge your changes with the project.
+
+            <br><br>
+            So to create pull request do the following.
+            <ul style="font-weight: 100;">
+                <li>Navigate to repository under your account</li>
+                <li>Switch to the branch under which you pushed the changes from the branches option</li>
+                <li>Click on the pull request button visible to you or click on contribute.</li>
+                <li>Write a nice message for the pull request describing the changes</li>
+                <li>Finally, click on create pull request</li>
+            </ul>
+        </p>
+        <p style="font-weight: 100;">
+            Once owner/maintainer of the original repository agrees to merge the changes introduced, your pull request will get merged with the project. And that's a great thing, Congratulations! you made a contribution to the project.
+        </p>
+
+        <p style="font-weight: 100;">
+            Thanks for being with me till here! I hope now you feel ready to contribute to the projects out there. To read more content like this checkout my latest blog <a href="../index.html#blogs" target="_blank" rel="noopener noreferrer">here</a>.
+        </p>
+    </section>
+
+    <footer id="footer">
+        <span id="infoButton"
+            class="d-block position-absolute translate-middle top-50 start-50 material-symbols-outlined">
+            info
+        </span>
+        <div id="infoContent"
+            class="d-flex w-100 justify-content-around align-items-center position-absolute top-50 start-50 translate-middle">
+            <div role="button">
+                <a style="color: white;" href="../privacy_policy.html">Privacy Policy</a>
+            </div>
+            <div role="button">
+                <a style="color: white;" href="../terms-and-conditions.html">Terms and conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
