@@ -1,92 +1,107 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://dev-akash.github.io/</loc>
-  <lastmod>2023-06-20T16:43:46+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://dev-akash.github.io/HoverBall/</loc>
-  <lastmod>2022-06-09T09:25:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://dev-akash.github.io/NeonPortfolio/</loc>
-  <lastmod>2021-04-05T04:48:55+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://dev-akash.github.io/JamBreadUI/</loc>
-  <lastmod>2021-01-04T14:28:08+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://dev-akash.github.io/posts/edge-detection-in-opencv.html</loc>
-  <lastmod>2023-06-20T16:43:46+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://dev-akash.github.io/posts/how-to-add-a-view-programmatically-in-android-using-java.html</loc>
-  <lastmod>2023-06-20T16:43:46+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://dev-akash.github.io/posts/how-to-create-pull-request.html</loc>
-  <lastmod>2023-06-20T16:43:46+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://dev-akash.github.io/posts/getting-started-with-videos-in-opencv.html</loc>
-  <lastmod>2023-06-20T16:43:46+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://dev-akash.github.io/posts/how-to-listen-mouse-events-in-opencv.html</loc>
-  <lastmod>2023-06-20T16:43:46+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://dev-akash.github.io/posts/how-to-convert-color-image-to-grayscale-in-opencv-with-python.html</loc>
-  <lastmod>2023-06-20T16:43:46+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://dev-akash.github.io/posts/how-to-read-image-in-opencv.html</loc>
-  <lastmod>2023-06-20T16:43:46+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://dev-akash.github.io/posts/how-to-install-opencv-python-on-windows.html</loc>
-  <lastmod>2023-06-20T16:43:46+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://dev-akash.github.io/posts/how-to-bulk-rename-files.html</loc>
-  <lastmod>2023-06-20T16:43:46+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://dev-akash.github.io/privacy_policy.html</loc>
-  <lastmod>2023-06-20T16:43:46+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://dev-akash.github.io/terms-and-conditions.html</loc>
-  <lastmod>2023-06-20T16:43:46+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://dev-akash.github.io/index.html</loc>
-  <lastmod>2023-06-20T16:43:46+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
-</urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+  <loc>https://dev-akash.in</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  </url>
+  <url>
+  <loc>https://dev-akash.in/blogs</loc>
+  <priority>0.8</priority>
+  <changefreq>daily</changefreq>
+  </url>
+  <url>
+  <loc>https://dev-akash.in/projects</loc>
+  <priority>0.8</priority>
+  <changefreq>daily</changefreq>
+  </url>
+  <url>
+  <loc>https://dev-akash.in/terms-and-conditions</loc>
+  <priority>0.8</priority>
+  <changefreq>daily</changefreq>
+  </url>
+  <url>
+  <loc>https://dev-akash.in/privacy-policy</loc>
+  <priority>0.8</priority>
+  <changefreq>daily</changefreq>
+  </url>
+  <url>
+  <loc>https://dev-akash.in/blogs/edge-detection-in-opencv</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+  </url>
+  <url>
+  <loc>https://dev-akash.in/blogs/how-to-install-opencv-on-windows</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+  </url>
+  <url>
+  <loc>https://dev-akash.in/blogs/how-to-bulk-rename-files</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+  </url>
+  <url>
+  <loc>https://dev-akash.in/blogs/how-to-convert-color-image-to-grayscale-in-opencv</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+  </url>
+  <url>
+  <loc>https://dev-akash.in/blogs/how-to-read-image-in-opencv</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+  </url>
+  <url>
+  <loc>https://dev-akash.in/blogs/getting-started-with-videos-in-opencv</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+  </url>
+  <url>
+  <loc>https://dev-akash.in/blogs/how-to-add-a-view-programmatically-in-andriod</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+  </url>
+  <url>
+  <loc>https://dev-akash.in/blogs/how-to-listen-mouse-events-in-opencv</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+  </url>
+  <url>
+  <loc>https://dev-akash.in/blogs/how-to-create-pull-request</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+  </url>
+  <url>
+  <loc>https://dev-akash.in/blogs/how-to-add-slide-to-pay-button-in-flutter</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+  </url>
+  <url>
+  <loc>https://dev-akash.in/projects/uniqr</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+  </url>
+  <url>
+  <loc>https://dev-akash.in/projects/slippingo</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+  </url>
+  <url>
+  <loc>https://dev-akash.in/projects/attendance-marking-system</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+  </url>
+  <url>
+  <loc>https://dev-akash.in/projects/pneumonia-detection</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+  </url>
+  <url>
+  <loc>https://dev-akash.in/projects/hover-ball</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+  </url>
+  <url>
+  <loc>https://dev-akash.in/projects/bulkren</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+  </url>
+  </urlset>
